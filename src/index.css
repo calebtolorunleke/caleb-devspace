@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #9333ea;
+  --color-accent: #f59e0b;
+  --color-background: #f3f4f6;
+  --color-text: #111827;
+  font-family: "inter", sans-serif;
+  background: #0000;
+}
