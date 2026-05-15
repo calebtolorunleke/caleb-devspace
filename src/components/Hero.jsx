@@ -1,4 +1,4 @@
-import profilePic from "../assets/calebProfile.webp";
+import profilePic from "../assets/calebProfile.png";
 import { HERO_CONTENT } from "../constants/index";
 import { motion } from "framer-motion";
 
@@ -23,7 +23,7 @@ const Hero = () => {
             <motion.img
               src={profilePic}
               alt="Caleb Adebayo"
-              className="border border-stone-900 rounded-3xl"
+              className="border border-stone-900 rounded-3xl bg-black p-4"
               width={650}
               height={650}
               initial={{ x: 100, opacity: 0 }}

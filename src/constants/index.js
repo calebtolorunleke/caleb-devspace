@@ -7,45 +7,80 @@ import project4 from "../assets/projects/project-4.webp";
 export const HERO_CONTENT = `Software Engineer with experience building scalable web applications and supporting high-availability production systems across fintech, logistics, and enterprise platforms. Specialized in React, Next.js, TypeScript, and Node.js, with strong expertise in performance optimization, debugging, API integrations, and production reliability.
 `;
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
-
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "Aug 2025 - Present",
+    role: "Software Engineer (Frontend / Production Systems)",
+    company: "Purolator Inc.",
+    description: `
+Improved frontend performance and responsiveness across enterprise logistics systems, reducing load times by 25% and improving UI responsiveness by 30%.  
+Enhanced system reliability by optimizing API integration, state management, and resolving distributed system bottlenecks, reducing latency by 20%.  
+Strengthened production stability through CI/CD improvements (GitHub Actions, Jenkins) and observability tooling (Dynatrace, Grafana), reducing incidents by 30%.
+    `,
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "CI/CD",
+      "GitHub Actions",
+      "Jenkins",
+      "Dynatrace",
+      "Grafana",
+      "REST APIs",
+      "Performance Optimization",
+    ],
   },
+
   {
-    year: "Jun 2025 - Aug 2023",
-    role: "Contract Full Stack Engineer (Frontend Focused) ",
+    year: "Jun 2025 - Aug 2025",
+    role: "Contract Full Stack Engineer (Frontend Focused)",
     company: "Skill4Skill",
-    description: `Built and maintained scalable web applications using Next.js, implementing both server and client components to establish a modular and efficient UI architecture that reduced development time for new features by 30%. Refactored legacy React code into reusable, maintainable components, reducing code duplication by 40% and improving overall system maintainability. Introduced and enforced code quality standards using ESLint, Prettier, and pre-commit hooks, which reduced merge conflicts by 60% and improved team collaboration and development consistency.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    description: `
+Built scalable Next.js applications using server and client components, reducing feature development time by 30%.  
+Refactored legacy React codebase into reusable components, reducing duplication by 40% and improving maintainability.  
+Improved team workflow by enforcing code quality standards (ESLint, Prettier, git hooks), reducing merge conflicts by 60%.
+    `,
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Server Components",
+      "ESLint",
+      "Prettier",
+      "Git",
+    ],
   },
+
   {
     year: "Feb 2022 - Jul 2025",
     role: "Freelance Frontend Developer (Part-Time)",
     company: "Findworka",
-    description: `Developed and maintained customer-facing web applications using React and modern frontend technologies, improving user experience and application performance through frontend optimization, code splitting, lazy loading, and collaboration on scalable UI architecture and API integrations.
-`,
+    description: `
+Developed and optimized React-based web applications focused on performance and user experience.  
+Implemented code splitting and lazy loading to improve application performance and scalability.  
+Collaborated on UI architecture and API integrations for production-ready applications.
+    `,
     technologies: [
       "React",
       "JavaScript",
       "TypeScript",
-      "HTML",
-      "CSS",
-      "REST APIs",
       "Frontend Optimization",
       "Code Splitting",
       "Lazy Loading",
+      "REST APIs",
     ],
   },
+
   {
     year: "Oct 2022 - Jul 2025",
-    role: "Production Engineer/Unit Head",
-    company: "Guaranty Trust Bank (GTCO)",
-    description: `Supported high-availability banking applications serving 3M+ users by improving production reliability, troubleshooting critical incidents, developing automation scripts with Python and PowerShell, and implementing monitoring solutions using Dynatrace and Grafana to enhance observability and system performance.`,
+    role: "Production Engineer / Unit Head",
+    company: "GTCO",
+    description: `
+Supported high-availability banking systems serving 3M+ users with focus on reliability and performance.  
+Improved incident response and system observability using Dynatrace, Grafana, and Splunk.  
+Built automation scripts (Python, PowerShell) to improve operational efficiency and reduce manual workload.
+    `,
     technologies: [
       "Python",
       "PowerShell",
@@ -53,9 +88,8 @@ export const EXPERIENCES = [
       "Grafana",
       "Splunk",
       "AWS CloudWatch",
-      "Windows Server",
-      "Linux",
       "SQL",
+      "Linux",
     ],
   },
 ];

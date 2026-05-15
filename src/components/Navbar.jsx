@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold tracking-tight text-white">
-          Caleb<span className="text-purple-500">.</span>dev
+          Caleb<span className="text-purple-500">.</span>
         </a>
 
         {/* Desktop Nav */}
