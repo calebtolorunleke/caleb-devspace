@@ -2,7 +2,7 @@ import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 
 const App = () => {
@@ -20,9 +20,9 @@ const App = () => {
           <Hero />
         </section>
         <Technologies />
-        <section id="projects" className="scroll-mt-24">
+        {/* <section id="projects" className="scroll-mt-24">
           <Projects />
-        </section>
+        </section> */}
         <section id="experience" className="scroll-mt-24">
           <Experience />
         </section>
