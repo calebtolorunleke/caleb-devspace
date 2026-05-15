@@ -9,7 +9,7 @@ export const HERO_CONTENT = `Software Engineer with experience building scalable
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 export const EXPERIENCES = [
   {
-    year: "Aug 2025 - Present",
+    year: "Oct 2025 - Present",
     role: "Software Engineer (Frontend / Production Systems)",
     company: "Purolator Inc.",
     description: `
@@ -32,7 +32,7 @@ Strengthened production stability through CI/CD improvements (GitHub Actions, Je
   },
 
   {
-    year: "Jun 2025 - Aug 2025",
+    year: "Jun 2025 - Sept 2025",
     role: "Contract Full Stack Engineer (Frontend Focused)",
     company: "Skill4Skill",
     description: `
@@ -53,7 +53,7 @@ Improved team workflow by enforcing code quality standards (ESLint, Prettier, gi
   },
 
   {
-    year: "Feb 2022 - Jul 2025",
+    year: "Feb 2022 - Jun 2025",
     role: "Freelance Frontend Developer (Part-Time)",
     company: "Findworka",
     description: `
@@ -73,7 +73,7 @@ Collaborated on UI architecture and API integrations for production-ready applic
   },
 
   {
-    year: "Oct 2022 - Jul 2025",
+    year: "Oct 2022 - Jun 2025",
     role: "Production Engineer / Unit Head",
     company: "GTCO",
     description: `
