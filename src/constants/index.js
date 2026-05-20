@@ -1,4 +1,4 @@
-import project1 from "../assets/projects/project-1.webp";
+import project1 from "../assets/projects/project1.png";
 import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
@@ -96,41 +96,47 @@ Built automation scripts (Python, PowerShell) to improve operational efficiency 
 
 export const PROJECTS = [
   {
-    title: "E-Commerce Website",
+    title: "MallLite – Modern E-Commerce Web App",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-    github: "https://github.com/your-repo",
-    demo: "https://your-live-site.com",
+      "A modern, fully responsive e-commerce frontend built with React and Tailwind CSS. Features include product browsing with filtering and search, dynamic cart system with quantity management, checkout flow, pagination, and a product detail page with routing. Designed with a real-world marketplace UX in mind.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "JavaScript",
+      "API Integration",
+    ],
+    demo: "https://malllite-marketplace.vercel.app/",
+    github: "https://github.com/calebtolorunleke/malllite-marketplace",
   },
-  {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-    github: "https://github.com/your-repo",
-    demo: "https://your-live-site.com",
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-    github: "https://github.com/your-repo",
-    demo: "https://your-live-site.com",
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-    github: "https://github.com/your-repo",
-    demo: "https://your-live-site.com",
-  },
+  // {
+  //   title: "Task Management App",
+  //   image: project2,
+  //   description:
+  //     "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
+  //   technologies: ["HTML", "CSS", "Angular", "Firebase"],
+  //   github: "https://github.com/your-repo",
+  //   demo: "https://your-live-site.com",
+  // },
+  // {
+  //   title: "Portfolio Website",
+  //   image: project3,
+  //   description:
+  //     "A personal portfolio website showcasing projects, skills, and contact information.",
+  //   technologies: ["HTML", "CSS", "React", "Bootstrap"],
+  //   github: "https://github.com/your-repo",
+  //   demo: "https://your-live-site.com",
+  // },
+  // {
+  //   title: "Blogging Platform",
+  //   image: project4,
+  //   description:
+  //     "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
+  //   technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
+  //   github: "https://github.com/your-repo",
+  //   demo: "https://your-live-site.com",
+  // },
 ];
 
 export const CONTACT = {
