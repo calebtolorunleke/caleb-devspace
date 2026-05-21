@@ -1,6 +1,6 @@
 import project1 from "../assets/projects/project1.png";
-import project2 from "../assets/projects/project-2.webp";
-import project3 from "../assets/projects/project-3.webp";
+import project2 from "../assets/projects/project2.png";
+import project3 from "../assets/projects/project3.png";
 import project4 from "../assets/projects/project-4.webp";
 
 // export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
@@ -109,6 +109,42 @@ export const PROJECTS = [
     ],
     demo: "https://malllite-marketplace.vercel.app/",
     github: "https://github.com/calebtolorunleke/malllite-marketplace",
+  },
+  {
+    title: "SpendWise – Elite Finance Dashboard",
+    image: project2, // replace with your actual imported screenshot
+    description:
+      "A modern financial dashboard built with React and Tailwind CSS featuring income/expense tracking, budgeting system, analytics views, and a SaaS-grade UI inspired by Stripe and Linear. Includes persistent state with localStorage, reusable components, and multi-page routing architecture.",
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "React Router",
+      "Context API",
+      "LocalStorage",
+      "Recharts",
+    ],
+    demo: "https://spending-wise.vercel.app/", // replace later
+    github: "https://github.com/calebtolorunleke/spendwise",
+  },
+  {
+    title: "JobberHaunt – SaaS Job Application Tracker",
+    image: project3, // replace with your actual screenshot
+
+    description:
+      "A production-style SaaS job tracking dashboard inspired by Stripe-level UI systems. Built with React, Tailwind CSS, and Framer Motion, it allows users to track job applications, monitor pipeline stages, and analyze progress with real-time analytics. Features include persistent state management with Context API + localStorage, dynamic filtering, reusable component architecture, and a fully responsive multi-page dashboard experience.",
+
+    technologies: [
+      "React (Vite)",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Router",
+      "Context API",
+      "LocalStorage",
+      "Component-based Architecture",
+    ],
+
+    demo: "https://jobber-haunt.vercel.app/", // replace with actual live link
+    github: "https://github.com/calebtolorunleke/jobber-haunt",
   },
   // {
   //   title: "Task Management App",
