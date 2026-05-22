@@ -4,7 +4,7 @@ const education = [
   {
     school: "Obafemi Awolowo University",
     degree: "MSc Computer Science (Postgraduate)",
-    period: "2024 - Present",
+    period: "2023 - 2025",
   },
   {
     school: "Ekiti State University",
@@ -32,7 +32,7 @@ const certifications = [
   {
     title: "Frontend Development Certification",
     issuer: "TechyJaunt",
-    year: "2025",
+    year: "2023",
   },
   {
     title: "Microsoft Azure Fundamentals",
@@ -48,8 +48,10 @@ const certifications = [
 
 const Educerts = () => {
   return (
-    <section className="py-24 px-6 md:px-10 border-t border-stone-900/40">
-      
+    <section
+      className="py-24 px-6 md:px-10 border-t border-stone-900/40"
+      id="educerts"
+    >
       {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
@@ -68,7 +70,6 @@ const Educerts = () => {
 
       {/* GRID */}
       <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        
         {/* LEFT — EDUCATION (dark premium cards) */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -77,9 +78,7 @@ const Educerts = () => {
           viewport={{ once: true }}
           className="rounded-2xl border border-stone-800 bg-stone-950/40 backdrop-blur-xl p-6 shadow-lg"
         >
-          <h3 className="text-lg font-semibold mb-6 text-white">
-            Education
-          </h3>
+          <h3 className="text-lg font-semibold mb-6 text-white">Education</h3>
 
           <div className="space-y-5">
             {education.map((edu, i) => (
@@ -87,12 +86,8 @@ const Educerts = () => {
                 key={i}
                 className="p-4 rounded-xl border border-stone-800 bg-stone-900/40 hover:bg-stone-900/70 transition"
               >
-                <p className="font-medium text-sm text-white">
-                  {edu.school}
-                </p>
-                <p className="text-xs text-stone-400 mt-1">
-                  {edu.degree}
-                </p>
+                <p className="font-medium text-sm text-white">{edu.school}</p>
+                <p className="text-xs text-stone-400 mt-1">{edu.degree}</p>
                 <span className="text-xs text-stone-500 block mt-2">
                   {edu.period}
                 </span>
@@ -101,7 +96,8 @@ const Educerts = () => {
           </div>
 
           <p className="mt-5 text-xs text-stone-500">
-            Academic background focused on systems, computing, and real-world engineering foundations.
+            Academic background focused on systems, computing, and real-world
+            engineering foundations.
           </p>
         </motion.div>
 
@@ -124,26 +120,20 @@ const Educerts = () => {
                 className="flex items-start justify-between gap-4 border-b border-stone-800 pb-3 last:border-none"
               >
                 <div>
-                  <p className="font-medium text-sm text-white">
-                    {cert.title}
-                  </p>
-                  <p className="text-xs text-stone-400">
-                    {cert.issuer}
-                  </p>
+                  <p className="font-medium text-sm text-white">{cert.title}</p>
+                  <p className="text-xs text-stone-400">{cert.issuer}</p>
                 </div>
 
-                <span className="text-xs text-stone-500">
-                  {cert.year}
-                </span>
+                <span className="text-xs text-stone-500">{cert.year}</span>
               </div>
             ))}
           </div>
 
           <p className="mt-5 text-xs text-stone-500">
-            Continuous learning through cloud, backend, frontend, and enterprise systems.
+            Continuous learning through cloud, backend, frontend, and enterprise
+            systems.
           </p>
         </motion.div>
-
       </div>
     </section>
   );

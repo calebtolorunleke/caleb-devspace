@@ -24,11 +24,11 @@ const App = () => {
         <section id="projects" className="scroll-mt-24">
           <Projects />
         </section>
-        <section id="educert" className="scroll-mt-24">
-          <Educerts />
-        </section>
         <section id="experience" className="scroll-mt-24">
           <Experience />
+          <section id="educert" className="scroll-mt-24">
+            <Educerts />
+          </section>
         </section>
         <section id="contact" className="scroll-mt-24">
           <Contact />

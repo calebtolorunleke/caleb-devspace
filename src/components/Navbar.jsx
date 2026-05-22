@@ -14,7 +14,6 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-
         {/* Logo */}
         <a href="/" className="text-2xl font-bold tracking-tight text-white">
           Caleb<span className="text-purple-500">.</span>
@@ -22,15 +21,24 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#about" className="text-sm text-stone-300 hover:text-white transition">
+          <a
+            href="#about"
+            className="text-sm text-stone-300 hover:text-white transition"
+          >
             About
           </a>
 
-          <a href="#projects" className="text-sm text-stone-300 hover:text-white transition">
+          <a
+            href="#projects"
+            className="text-sm text-stone-300 hover:text-white transition"
+          >
             Projects
           </a>
 
-          <a href="#experience" className="text-sm text-stone-300 hover:text-white transition">
+          <a
+            href="#experience"
+            className="text-sm text-stone-300 hover:text-white transition"
+          >
             Experience
           </a>
 
@@ -39,14 +47,12 @@ const Navbar = () => {
             href="#educerts"
             className="flex items-center gap-2 text-sm text-stone-300 hover:text-white transition"
           >
-            <HiOutlineAcademicCap />
             Educerts
           </a>
         </div>
 
         {/* Right Side */}
         <div className="hidden items-center gap-4 md:flex">
-
           {/* Resume */}
           <a
             href="/Caleb_Resume.pdf"
@@ -96,16 +102,27 @@ const Navbar = () => {
             className="border-t border-stone-800 bg-black px-6 py-6 md:hidden"
           >
             <div className="flex flex-col gap-6">
-
-              <a onClick={() => setIsOpen(false)} href="#about" className="text-stone-300 hover:text-white">
+              <a
+                onClick={() => setIsOpen(false)}
+                href="#about"
+                className="text-stone-300 hover:text-white"
+              >
                 About
               </a>
 
-              <a onClick={() => setIsOpen(false)} href="#projects" className="text-stone-300 hover:text-white">
+              <a
+                onClick={() => setIsOpen(false)}
+                href="#projects"
+                className="text-stone-300 hover:text-white"
+              >
                 Projects
               </a>
 
-              <a onClick={() => setIsOpen(false)} href="#experience" className="text-stone-300 hover:text-white">
+              <a
+                onClick={() => setIsOpen(false)}
+                href="#experience"
+                className="text-stone-300 hover:text-white"
+              >
                 Experience
               </a>
 
@@ -115,7 +132,6 @@ const Navbar = () => {
                 href="#educerts"
                 className="flex items-center gap-2 text-stone-300 hover:text-white"
               >
-                <HiOutlineAcademicCap />
                 Educerts
               </a>
 
@@ -130,11 +146,17 @@ const Navbar = () => {
 
               {/* Socials */}
               <div className="flex items-center gap-5 pt-2 text-2xl">
-                <a href="https://github.com/calebtolorunleke" className="text-stone-400 hover:text-white">
+                <a
+                  href="https://github.com/calebtolorunleke"
+                  className="text-stone-400 hover:text-white"
+                >
                   <FaGithub />
                 </a>
 
-                <a href="https://www.linkedin.com/in/calebtol/" className="text-stone-400 hover:text-white">
+                <a
+                  href="https://www.linkedin.com/in/calebtol/"
+                  className="text-stone-400 hover:text-white"
+                >
                   <FaLinkedin />
                 </a>
               </div>
