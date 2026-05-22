@@ -3,37 +3,57 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="border-t border-stone-900 pb-20">
+    <section className="border-t border-stone-200 py-24 px-6 md:px-10">
+
+      {/* HEADLINE */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -40 }}
         transition={{ duration: 0.5 }}
-        className="my-10 text-center text-4xl"
+        className="text-center text-3xl md:text-4xl font-semibold"
       >
-        Get in Touch
+        Let’s build something great together
       </motion.h2>
-      <div className="text-center tracking-tighter">
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="my-4"
+
+      <p className="text-center text-gray-500 mt-4 max-w-xl mx-auto">
+        I’m currently open to frontend or full-stack opportunities. 
+        Let’s talk about your team, product, or ideas.
+      </p>
+
+      {/* CTA BUTTONS */}
+      <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <a
+          href={`mailto:${CONTACT.email}`}
+          className="px-6 py-3 bg-black text-white rounded-xl text-center hover:scale-[1.02] transition"
         >
-          {CONTACT.address}
-        </motion.p>
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 1 }}
-          className="my-4 "
+          Email Me
+        </a>
+
+        <a
+          href="https://github.com/calebtolorunleke"
+          target="_blank"
+          className="px-6 py-3 border rounded-xl text-center hover:bg-gray-50 transition"
         >
-          {CONTACT.phoneNo}
-        </motion.p>
-        <a href={`mailto:${CONTACT.email}`} className="border-b">
-          {CONTACT.email}
+          GitHub
+        </a>
+
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          className="px-6 py-3 border rounded-xl text-center hover:bg-gray-50 transition"
+        >
+          LinkedIn
         </a>
       </div>
-    </div>
+
+      {/* SECONDARY INFO */}
+      <div className="text-center text-sm text-gray-500 mt-12 space-y-2">
+        <p>{CONTACT.address}</p>
+        <p>{CONTACT.phoneNo}</p>
+        <p className="text-black font-medium">{CONTACT.email}</p>
+      </div>
+
+    </section>
   );
 };
 

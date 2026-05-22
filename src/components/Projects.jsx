@@ -1,149 +1,104 @@
-// import { PROJECTS } from "../constants/index";
-// import { motion } from "framer-motion";
-
-// const Projects = () => {
-//   return (
-//     <div className="pb-4">
-//       <motion.h2
-//         whileInView={{ opacity: 1, y: 0 }}
-//         initial={{ opacity: 0, y: -100 }}
-//         transition={{ duration: 0.5 }}
-//         className="my-20 text-center text-4xl"
-//       >
-//         Projects
-//       </motion.h2>
-//       <div>
-//         {PROJECTS.map((project, index) => (
-//           <div key={index} className="mb-8 flex flex-wrap lg:justify-center ">
-//             <motion.div
-//               whileInView={{ opacity: 1, x: 0 }}
-//               initial={{ opacity: 0, x: -100 }}
-//               transition={{ duration: 1 }}
-//               className="w-full lg:w-1/4"
-//             >
-//               <img
-//                 src={project.image}
-//                 width={250}
-//                 height={250}
-//                 alt={project.title}
-//                 className="mb-6 rounded"
-//               />
-//             </motion.div>
-//             <motion.div
-//               whileInView={{ opacity: 1, x: 0 }}
-//               initial={{ opacity: 0, x: -100 }}
-//               transition={{ duration: 1 }}
-//               className="w-full max-w-xl lg:w-3/4 p-6"
-//             >
-//               <h3 className="mb-2 font-semibold text-2xl ">{project.title}</h3>
-//               <p className="mb-4 text-stone-400"> {project.description}</p>
-//               {project.technologies.map((tech, index) => (
-//                 <span
-//                   key={index}
-//                   className="rounded mr-2 bg-stone-900 p-2 text-sm font-medium text-stone-300"
-//                 >
-//                   {tech}
-//                 </span>
-//               ))}
-//             </motion.div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Projects;
-
 import { PROJECTS } from "../constants/index";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="pb-10">
+    <div className="pb-16">
+      {/* HEADER */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.6 }}
-        className="my-20 text-center text-4xl font-semibold"
+        className="my-20 text-center text-4xl font-semibold text-white"
       >
         Projects
       </motion.h2>
 
-      <div>
-        {PROJECTS.map((project) => (
-          <div
-            key={project.title}
-            className="mb-12 flex flex-wrap lg:justify-center items-center transition duration-300 hover:scale-[1.01]"
-          >
-            {/* Image */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -80 }}
-              transition={{ duration: 0.8 }}
-              className="w-full lg:w-1/4"
+      <div className="space-y-24">
+        {PROJECTS.map((project, index) => {
+          const isEven = index % 2 === 0;
+
+          return (
+            <div
+              key={project.title}
+              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
+                isEven ? "lg:flex-row" : "lg:flex-row-reverse"
+              }`}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="mb-6 w-[250px] rounded-lg shadow-md hover:scale-105 transition duration-300"
-              />
-            </motion.div>
+              {/* IMAGE */}
+              <motion.div
+                initial={{ opacity: 0, x: isEven ? -80 : 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="w-full lg:w-1/2 flex justify-center"
+              >
+                <div className="relative group">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full max-w-md rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
 
-            {/* Content */}
-            <motion.div
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 80 }}
-              transition={{ duration: 0.8 }}
-              className="w-full max-w-xl lg:w-3/4 p-6"
-            >
-              <h3 className="mb-2 font-semibold text-2xl text-white">
-                {project.title}
-              </h3>
+                  {/* subtle glow */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
+                </div>
+              </motion.div>
 
-              <p className="mb-4 text-stone-400 leading-relaxed">
-                {project.description}
-              </p>
+              {/* CONTENT */}
+              <motion.div
+                initial={{ opacity: 0, x: isEven ? 80 : -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="w-full lg:w-1/2"
+              >
+                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
+                  {project.title}
+                </h3>
 
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-md bg-stone-900 px-3 py-1 text-sm font-medium text-stone-300 hover:bg-stone-800 transition"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                <p className="text-stone-400 leading-relaxed mb-5">
+                  {project.description}
+                </p>
 
-              {/* Buttons */}
-              <div className="flex gap-4">
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-md bg-white text-black text-sm font-medium hover:bg-stone-200 transition cursor-pointer"
-                  >
-                    Live Demo
-                  </a>
-                )}
+                {/* TECH STACK */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 text-sm rounded-full bg-stone-900 text-stone-300 hover:bg-stone-800 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
 
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-md border border-stone-500 text-stone-300 text-sm font-medium hover:bg-stone-800 transition cursor-pointer"
-                  >
-                    GitHub
-                  </a>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        ))}
+                {/* BUTTONS */}
+                <div className="flex gap-4">
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-xl bg-white text-black text-sm font-medium hover:scale-105 transition"
+                    >
+                      Live Demo
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-5 py-2 rounded-xl border border-stone-500 text-stone-300 text-sm font-medium hover:bg-stone-800 transition"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

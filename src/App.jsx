@@ -1,4 +1,5 @@
 import Contact from "./components/Contact";
+import Educerts from "./components/Educerts";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -22,6 +23,9 @@ const App = () => {
         <Technologies />
         <section id="projects" className="scroll-mt-24">
           <Projects />
+        </section>
+        <section id="educert" className="scroll-mt-24">
+          <Educerts />
         </section>
         <section id="experience" className="scroll-mt-24">
           <Experience />
