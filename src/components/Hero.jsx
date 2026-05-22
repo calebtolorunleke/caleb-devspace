@@ -1,77 +1,199 @@
 import profilePic from "../assets/calebProfile.png";
 import { HERO_CONTENT } from "../constants/index";
 import { motion } from "framer-motion";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 const containerVariants = {
-  hidden: { opacity: 0, x: -100 },
+  hidden: { opacity: 0, x: -60 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, staggerChildren: 0.5 },
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.15,
+    },
   },
 };
+
 const childVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
 };
+
 const Hero = () => {
   return (
-    <div className="pb-4 lg:mb-36">
-      <div className="flex flex-wrap lg:flex-row-reverse">
+    <section className="pb-10 lg:pb-28">
+      <div className="flex flex-wrap lg:flex-row-reverse items-center">
+        {/* IMAGE */}
         <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:p-8">
-            <motion.img
-              src={profilePic}
-              alt="Caleb Adebayo"
-              className="border border-stone-900 rounded-3xl bg-black p-4"
-              width={650}
-              height={650}
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.3}}
-            />
+          <div className="flex justify-center lg:justify-end lg:p-6">
+            <motion.div
+              initial={{ opacity: 0, x: 60 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="
+              rounded-[32px]
+              border
+              border-white/10
+              bg-white/[0.03]
+              backdrop-blur-sm
+              p-3
+              shadow-2xl
+              "
+            >
+              <img
+                src={profilePic}
+                alt="Caleb Adebayo"
+                width={620}
+                height={620}
+                className="
+                rounded-[24px]
+                object-cover
+                "
+              />
+            </motion.div>
           </div>
         </div>
 
+        {/* TEXT */}
         <div className="w-full lg:w-1/2">
           <motion.div
+            variants={containerVariants}
             initial="hidden"
             animate="visible"
-            variants={containerVariants}
-            className="flex flex-col items-center lg:items-start mt-10"
+            className="
+            mt-12
+            flex
+            flex-col
+            items-center
+            lg:items-start
+            "
           >
-            <motion.h2
+            <motion.h1
               variants={childVariants}
-              className="pb-2 text-5xl tracking-tighter sm:text-6xl lg:text-8xl"
+              className="
+              text-5xl
+              sm:text-6xl
+              lg:text-7xl
+              font-semibold
+              tracking-[-0.05em]
+              "
             >
               Caleb Adebayo
-            </motion.h2>
-            <motion.span
-              variants={childVariants}
-              className="bg-linear-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
-            >
-              Frontend / Full-Stack Engineer
-            </motion.span>
+            </motion.h1>
+
             <motion.p
               variants={childVariants}
-              className="my-2 max-w-xl py-6 text-xl leading-relaxed tracking-tighter"
+              className="
+              mt-4
+              bg-gradient-to-r
+              from-white
+              via-stone-300
+              to-stone-500
+              bg-clip-text
+              text-transparent
+              text-xl
+              lg:text-2xl
+              font-medium
+              "
+            >
+              Frontend-Focused Full Stack Engineer
+            </motion.p>
+
+            <motion.p
+              variants={childVariants}
+              className="
+              mt-6
+              max-w-xl
+              text-lg
+              text-stone-400
+              leading-relaxed
+              "
             >
               {HERO_CONTENT}
             </motion.p>
-            <motion.a
+
+            {/* CTA */}
+
+            <motion.div
               variants={childVariants}
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download
-              className="mb-10 rounded-full bg-white px-6 py-4 text-sm text-stone-800 transition hover:scale-105"
+              className="
+              mt-8
+              flex
+              flex-col
+              sm:flex-row
+              gap-4
+              "
             >
-              View Resume
-            </motion.a>
+              {/* Projects FIRST */}
+
+              <a
+                href="#projects"
+                className="
+                rounded-full
+                bg-white
+                text-black
+                px-7
+                py-3.5
+                font-medium
+                transition-all
+                duration-300
+                hover:scale-[1.03]
+                hover:bg-stone-200
+                "
+              >
+                View Projects
+              </a>
+
+              {/* Resume */}
+
+              <a
+                href="./Caleb_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                rounded-full
+                border
+                border-white/15
+                bg-white/[0.03]
+                backdrop-blur-sm
+                px-7
+                py-3.5
+                flex
+                items-center
+                gap-2
+                font-medium
+                transition-all
+                duration-300
+                hover:border-white/30
+                hover:bg-white/[0.06]
+                hover:scale-[1.03]
+                "
+              >
+                View Resume
+                <HiArrowUpRight
+                  className="
+                  text-lg
+                  transition-transform
+                  group-hover:translate-x-0.5
+                  group-hover:-translate-y-0.5
+                  "
+                />
+              </a>
+            </motion.div>
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
