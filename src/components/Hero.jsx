@@ -1,4 +1,4 @@
-import profilePic from "../assets/calebProfile.png";
+import profilePic from "../assets/calebProfile.jpg";
 import { HERO_CONTENT } from "../constants/index";
 import { motion } from "framer-motion";
 import { HiArrowUpRight } from "react-icons/hi2";

@@ -19,3 +19,12 @@ body {
   font-family: "inter", sans-serif;
   /* background: #0000; */
 }
+
+
+/* In your CSS file */
+.portfolio-logo {
+  width: 32px;      /* Adjust size as needed for your navbar */
+  height: 32px;
+  border-radius: 50%; /* This creates a perfect circle curve */
+  object-fit: cover;
+}
