@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const education = [
   {
     school: "Obafemi Awolowo University",
-    degree: "MSc Computer Science (Postgraduate)",
+    degree: "PGD Computer Science (Postgraduate)",
     period: "2023 - 2025",
   },
   {
@@ -101,7 +101,7 @@ const Educerts = () => {
           </p>
         </motion.div>
 
-        {/* RIGHT — CERTIFICATIONS (your clean Stripe-style list) */}
+        {/* RIGHT — CERTIFICATIONS */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}

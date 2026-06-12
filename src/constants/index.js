@@ -54,7 +54,7 @@ Improved team workflow by enforcing code quality standards (ESLint, Prettier, gi
 
   {
     year: "Feb 2022 - Jun 2025",
-    role: "Freelance Frontend Developer (Part-Time)",
+    role: "Frontend Developer (Part-Time)",
     company: "Findworka",
     description: `
 Developed and optimized React-based web applications focused on performance and user experience.  
