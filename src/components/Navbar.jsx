@@ -1,15 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   HiOutlineMenuAlt3,
   HiX,
   HiOutlineDocumentText,
-  HiOutlineAcademicCap,
 } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const navLinkClass = (section) =>
+    `relative text-sm transition ${
+      activeSection === section
+        ? "text-white"
+        : "text-stone-300 hover:text-white"
+    }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
@@ -21,62 +49,61 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden items-center gap-8 md:flex">
-          <a
-            href="#about"
-            className="text-sm text-stone-300 hover:text-white transition"
-          >
+          <a href="#about" className={navLinkClass("about")}>
             About
+            {activeSection === "about" && (
+              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+            )}
           </a>
 
-          <a
-            href="#projects"
-            className="text-sm text-stone-300 hover:text-white transition"
-          >
+          <a href="#projects" className={navLinkClass("projects")}>
             Projects
+            {activeSection === "projects" && (
+              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+            )}
           </a>
 
-          <a
-            href="#experience"
-            className="text-sm text-stone-300 hover:text-white transition"
-          >
+          <a href="#experience" className={navLinkClass("experience")}>
             Experience
+            {activeSection === "experience" && (
+              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+            )}
           </a>
 
-          {/* NEW: Educerts */}
-          <a
-            href="#educerts"
-            className="flex items-center gap-2 text-sm text-stone-300 hover:text-white transition"
-          >
+          <a href="#educerts" className={navLinkClass("educerts")}>
             Educerts
+            {activeSection === "educerts" && (
+              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+            )}
           </a>
         </div>
 
         {/* Right Side */}
         <div className="hidden items-center gap-4 md:flex">
-          {/* Resume */}
           <a
             href="/Caleb_Resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm text-stone-300 transition hover:border-purple-500 hover:text-white"
           >
             <HiOutlineDocumentText />
             Resume
           </a>
 
-          {/* GitHub */}
           <a
             href="https://github.com/calebtolorunleke"
             target="_blank"
-            className="text-xl text-stone-400 hover:text-white hover:scale-110 transition"
+            rel="noopener noreferrer"
+            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
           >
             <FaGithub />
           </a>
 
-          {/* LinkedIn */}
           <a
             href="https://www.linkedin.com/in/calebtol/"
             target="_blank"
-            className="text-xl text-stone-400 hover:text-white hover:scale-110 transition"
+            rel="noopener noreferrer"
+            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
           >
             <FaLinkedin />
           </a>
@@ -103,34 +130,49 @@ const Navbar = () => {
           >
             <div className="flex flex-col gap-6">
               <a
-                onClick={() => setIsOpen(false)}
                 href="#about"
-                className="text-stone-300 hover:text-white"
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  activeSection === "about"
+                    ? "text-purple-500"
+                    : "text-stone-300"
+                }`}
               >
                 About
               </a>
 
               <a
-                onClick={() => setIsOpen(false)}
                 href="#projects"
-                className="text-stone-300 hover:text-white"
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  activeSection === "projects"
+                    ? "text-purple-500"
+                    : "text-stone-300"
+                }`}
               >
                 Projects
               </a>
 
               <a
-                onClick={() => setIsOpen(false)}
                 href="#experience"
-                className="text-stone-300 hover:text-white"
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  activeSection === "experience"
+                    ? "text-purple-500"
+                    : "text-stone-300"
+                }`}
               >
                 Experience
               </a>
 
-              {/* NEW MOBILE */}
               <a
-                onClick={() => setIsOpen(false)}
                 href="#educerts"
-                className="flex items-center gap-2 text-stone-300 hover:text-white"
+                onClick={() => setIsOpen(false)}
+                className={`${
+                  activeSection === "educerts"
+                    ? "text-purple-500"
+                    : "text-stone-300"
+                }`}
               >
                 Educerts
               </a>
@@ -138,16 +180,18 @@ const Navbar = () => {
               <a
                 href="/Caleb_Resume.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 text-stone-300 hover:text-white"
               >
                 <HiOutlineDocumentText />
                 Resume
               </a>
 
-              {/* Socials */}
               <div className="flex items-center gap-5 pt-2 text-2xl">
                 <a
                   href="https://github.com/calebtolorunleke"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-stone-400 hover:text-white"
                 >
                   <FaGithub />
@@ -155,6 +199,8 @@ const Navbar = () => {
 
                 <a
                   href="https://www.linkedin.com/in/calebtol/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-stone-400 hover:text-white"
                 >
                   <FaLinkedin />

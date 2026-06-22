@@ -53,8 +53,8 @@ const Hero = () => {
               <img
                 src={profilePic}
                 alt="Caleb Adebayo"
-                width={620}
-                height={620}
+                width={550}
+                height={150}
                 className="
                 rounded-[24px]
                 object-cover
