@@ -182,22 +182,21 @@
 // };
 
 
-
 import project1 from "../assets/projects/project1.png";
 import project2 from "../assets/projects/project2.png";
 import project3 from "../assets/projects/project3.png";
 // import project4 from "../assets/projects/project-4.webp";
 
 export const HERO_CONTENT = `
-Software Engineer specializing in React, Next.js, TypeScript, and modern frontend engineering. I build scalable, production-ready web applications and support high-availability systems across logistics, fintech, and enterprise environments. Passionate about creating performant user experiences, solving complex engineering problems, and delivering reliable software through clean architecture, API integration, and modern development practices.
+Software Engineer specializing in React, Next.js, TypeScript, and Node.js, with a strong focus on modern frontend engineering and production systems. I build scalable, production-ready web applications and support high-availability platforms across logistics, fintech, and enterprise environments. Passionate about performance optimization, clean architecture, API integration, and delivering reliable software through modern engineering practices.
 `;
 
 export const ABOUT_TEXT = `
-I'm a Software Engineer who enjoys building products that are both technically robust and enjoyable to use. My experience spans modern frontend development with React, Next.js, and TypeScript, as well as production engineering where I've worked on application reliability, CI/CD pipelines, monitoring, and distributed systems.
+I'm a Software Engineer focused on building scalable and reliable web applications using React, Next.js, TypeScript, and Node.js. My experience spans modern frontend development and production engineering, where I’ve worked on application reliability, CI/CD pipelines, monitoring systems, and distributed system troubleshooting.
 
-I enjoy designing reusable component architectures, optimizing application performance, integrating APIs, and solving complex production issues. Whether I'm developing customer-facing interfaces or improving system reliability behind the scenes, I focus on writing maintainable code that scales with business needs.
+I specialize in building reusable component architectures, integrating REST APIs, optimizing application performance, and solving real-world production issues. Whether working on user-facing interfaces or system reliability behind the scenes, I prioritize clean, maintainable code that scales effectively.
 
-I'm currently expanding my expertise by building production-inspired applications that showcase modern frontend architecture, clean UI design, and real-world engineering practices.
+I’m currently focused on building production-inspired applications that demonstrate modern frontend architecture, strong UI design, and real-world engineering practices.
 `;
 
 export const EXPERIENCES = [
@@ -208,7 +207,7 @@ export const EXPERIENCES = [
     description: `
 Develop and maintain scalable React and TypeScript applications for enterprise logistics platforms, delivering responsive user interfaces and production-ready shipment management workflows.
 
-Troubleshoot complex frontend, API, and distributed-system issues while leading root cause analysis (RCA) for critical production incidents, partnering with cross-functional teams to implement long-term reliability improvements.
+Troubleshoot complex frontend, API, and distributed-system issues while leading root cause analysis (RCA) for critical production incidents, collaborating with cross-functional teams to implement long-term reliability improvements.
 
 Optimize CI/CD pipelines using GitHub Actions and Jenkins, improving deployment reliability and streamlining software release processes.
 
@@ -219,6 +218,7 @@ Enhance client-side rendering and state management for high-volume shipment trac
     technologies: [
       "React",
       "TypeScript",
+      "Node.js",
       "REST APIs",
       "GitHub Actions",
       "Jenkins",
@@ -268,11 +268,11 @@ Mentored junior developers on React, JavaScript, frontend architecture, and engi
     `,
     technologies: [
       "React",
-      "JavaScript",
       "Node.js",
       "Express.js",
       "MongoDB",
       "REST APIs",
+      "JavaScript",
       "Performance Optimization",
       "Code Splitting",
       "Lazy Loading",
@@ -349,6 +349,7 @@ export const PROJECTS = [
     technologies: [
       "React",
       "TypeScript",
+      "Node.js",
       "Tailwind CSS",
       "Framer Motion",
       "React Router",
