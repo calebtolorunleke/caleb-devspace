@@ -13,8 +13,8 @@
 //     role: "Software Engineer (Frontend / Production Systems)",
 //     company: "Purolator Inc.",
 //     description: `
-// Improved frontend performance and responsiveness across enterprise logistics systems, reducing load times by 25% and improving UI responsiveness by 30%.  
-// Enhanced system reliability by optimizing API integration, state management, and resolving distributed system bottlenecks, reducing latency by 20%.  
+// Improved frontend performance and responsiveness across enterprise logistics systems, reducing load times by 25% and improving UI responsiveness by 30%.
+// Enhanced system reliability by optimizing API integration, state management, and resolving distributed system bottlenecks, reducing latency by 20%.
 // Strengthened production stability through CI/CD improvements (GitHub Actions, Jenkins) and observability tooling (Dynatrace, Grafana), reducing incidents by 30%.
 //     `,
 //     technologies: [
@@ -36,8 +36,8 @@
 //     role: "Contract Full Stack Engineer (Frontend Focused)",
 //     company: "Skill4Skill",
 //     description: `
-// Built scalable Next.js applications using server and client components, reducing feature development time by 30%.  
-// Refactored legacy React codebase into reusable components, reducing duplication by 40% and improving maintainability.  
+// Built scalable Next.js applications using server and client components, reducing feature development time by 30%.
+// Refactored legacy React codebase into reusable components, reducing duplication by 40% and improving maintainability.
 // Improved team workflow by enforcing code quality standards (ESLint, Prettier, git hooks), reducing merge conflicts by 60%.
 //     `,
 //     technologies: [
@@ -57,8 +57,8 @@
 //     role: "Frontend Developer (Part-Time)",
 //     company: "Findworka",
 //     description: `
-// Developed and optimized React-based web applications focused on performance and user experience.  
-// Implemented code splitting and lazy loading to improve application performance and scalability.  
+// Developed and optimized React-based web applications focused on performance and user experience.
+// Implemented code splitting and lazy loading to improve application performance and scalability.
 // Collaborated on UI architecture and API integrations for production-ready applications.
 //     `,
 //     technologies: [
@@ -77,8 +77,8 @@
 //     role: "Production Engineer / Unit Head",
 //     company: "GTCO",
 //     description: `
-// Supported high-availability banking systems serving 3M+ users with focus on reliability and performance.  
-// Improved incident response and system observability using Dynatrace, Grafana, and Splunk.  
+// Supported high-availability banking systems serving 3M+ users with focus on reliability and performance.
+// Improved incident response and system observability using Dynatrace, Grafana, and Splunk.
 // Built automation scripts (Python, PowerShell) to improve operational efficiency and reduce manual workload.
 //     `,
 //     technologies: [
@@ -181,11 +181,12 @@
 //   email: "calebtolorunleke@yahoo.com",
 // };
 
-
 import project1 from "../assets/projects/project1.png";
 import project2 from "../assets/projects/project2.png";
 import project3 from "../assets/projects/project3.png";
 // import project4 from "../assets/projects/project-4.webp";
+import eventra from "../assets/projects/eventra.png";
+import skillpath from "../assets/projects/skillpath.png"
 
 export const HERO_CONTENT = `
 Software Engineer specializing in React, Next.js, TypeScript, and Node.js, with a strong focus on modern frontend engineering and production systems. I build scalable, production-ready web applications and support high-availability platforms across logistics, fintech, and enterprise environments. Passionate about performance optimization, clean architecture, API integration, and delivering reliable software through modern engineering practices.
@@ -307,6 +308,39 @@ Designed monitoring dashboards and alerting solutions using Dynatrace and Grafan
 ];
 
 export const PROJECTS = [
+  {
+    title: "SkillPath – Online Learning Platform",
+    image: skillpath,
+    description:
+      "Modern and responsive online learning platform built with React and Tailwind CSS. Features a polished landing page with reusable components, interactive course sections, testimonials, partner showcase, and responsive layouts. Designed with a focus on clean UI/UX, accessibility, and component-driven frontend architecture.",
+    technologies: [
+      "React",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "React Router",
+      "React Fast Marquee",
+      "React Icons",
+      "Responsive Design",
+    ],
+    demo: "https://your-skillpath-demo.vercel.app/",
+    github: "https://github.com/calebtolorunleke/skillpath",
+  },
+  {
+    title: "Eventra – Event Discovery & Booking Platform",
+    image: eventra,
+    description:
+      "Modern event discovery platform built with React featuring a responsive landing page, reusable component architecture, dynamic event listings, categorized browsing, testimonials, and scalable UI patterns. Designed with a data-driven approach and modern frontend best practices to provide an engaging and production-ready user experience. The platform is actively evolving with upcoming features including authentication, organizer dashboards, event booking, and user profiles.",
+    technologies: [
+      "React",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "React Router",
+      "Material UI",
+      "Responsive Design",
+    ],
+    demo: "https://eventra-rouge.vercel.app/",
+    github: "https://github.com/calebtolorunleke/eventra",
+  },
   {
     title: "MallLite – Modern E-Commerce Platform",
     image: project1,
