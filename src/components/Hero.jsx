@@ -31,11 +31,11 @@ const childVariants = {
 
 const Hero = () => {
   return (
-    <section className="pb-10 lg:pb-28">
+    <section className="pb-10 lg:pb-5">
       <div className="flex flex-wrap lg:flex-row-reverse items-center">
         {/* IMAGE */}
         <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:justify-end lg:p-6">
+          <div className="flex justify-center lg:p-6">
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -53,8 +53,8 @@ const Hero = () => {
               <img
                 src={profilePic}
                 alt="Caleb Adebayo"
-                width={620}
-                height={620}
+                width={400}
+                height={100}
                 className="
                 rounded-[24px]
                 object-cover
@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
 
         {/* TEXT */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full  lg:w-1/2">
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -113,7 +113,7 @@ const Hero = () => {
               variants={childVariants}
               className="
               mt-6
-              max-w-xl
+              max-w-3xl
               text-lg
               text-stone-400
               leading-relaxed
