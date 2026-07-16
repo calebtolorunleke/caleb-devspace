@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <section className="border-t border-stone-200 py-24 px-6 md:px-10">
-
       {/* HEADLINE */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,8 +15,8 @@ const Contact = () => {
       </motion.h2>
 
       <p className="text-center text-gray-500 mt-4 max-w-xl mx-auto">
-        I’m currently open to frontend or full-stack opportunities. 
-        Let’s talk about your team, product, or ideas.
+        I’m currently open to Frontend Engineer, React Developer, Full-Stack
+        Engineer, and Software Engineer opportunities across Canada.
       </p>
 
       {/* CTA BUTTONS */}
@@ -49,10 +48,9 @@ const Contact = () => {
       {/* SECONDARY INFO */}
       <div className="text-center text-sm text-gray-500 mt-12 space-y-2">
         <p>{CONTACT.address}</p>
-        <p>{CONTACT.phoneNo}</p>
+        {/* <p>{CONTACT.phoneNo}</p> */}
         <p className="text-black font-medium">{CONTACT.email}</p>
       </div>
-
     </section>
   );
 };

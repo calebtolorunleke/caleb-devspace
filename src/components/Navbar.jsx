@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import {
-  HiOutlineMenuAlt3,
-  HiX,
-  HiOutlineDocumentText,
-} from "react-icons/hi";
+import { HiOutlineMenuAlt3, HiX, HiOutlineDocumentText } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -71,7 +67,7 @@ const Navbar = () => {
           </a>
 
           <a href="#educerts" className={navLinkClass("educerts")}>
-            Educerts
+            Credentials
             {activeSection === "educerts" && (
               <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
             )}
@@ -174,7 +170,7 @@ const Navbar = () => {
                     : "text-stone-300"
                 }`}
               >
-                Educerts
+                Credentials
               </a>
 
               <a

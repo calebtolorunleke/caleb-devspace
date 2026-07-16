@@ -41,9 +41,19 @@ const Experience = () => {
             </p>
 
             {/* description */}
-            <p className="mt-5 max-w-3xl leading-8 text-stone-300">
-              {experience.description}
-            </p>
+            {/* description */}
+            <ul className="mt-5 max-w-3xl space-y-3">
+              {experience.description.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-stone-300 leading-7"
+                >
+                  <span className="mt-3 h-1.5 w-1.5 rounded-full bg-stone-400 flex-shrink-0" />
+
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
 
             {/* tech stack */}
             <div className="mt-5 flex flex-wrap gap-2">

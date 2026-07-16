@@ -122,7 +122,7 @@ const Technologies = () => {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
-        Technologies
+        Technical Skills
       </motion.h2>
 
       <motion.div
