@@ -266,6 +266,52 @@ export const PROJECTS = [
   },
 ];
 
+export const education = [
+  {
+    school: "Obafemi Awolowo University",
+    degree: "PGD Computer Science (Postgraduate)",
+    period: "2023 - 2025",
+  },
+  {
+    school: "Ekiti State University",
+    degree: "BSc Biotechnology",
+    period: "2014 - 2019",
+  },
+];
+
+export const certifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    year: "2026",
+  },
+  {
+    title: "Meta Full-Stack Developer Specialization",
+    issuer: "Coursera (Meta)",
+    year: "2025",
+  },
+  {
+    title: "Full-Stack Developer Certification",
+    issuer: "Tech Studio Academy",
+    year: "2025",
+  },
+  {
+    title: "Frontend Development Certification",
+    issuer: "TechyJaunt",
+    year: "2023",
+  },
+  {
+    title: "Microsoft Azure Fundamentals",
+    issuer: "Microsoft",
+    year: "2023",
+  },
+  {
+    title: "Google IT Support Professional Certificate",
+    issuer: "Google / Coursera",
+    year: "2022",
+  },
+];
+
 export const CONTACT = {
   address: "Vancouver, British Columbia, Canada",
   phoneNo: "+1 (236) 335-7976",
