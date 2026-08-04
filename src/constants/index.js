@@ -26,10 +26,10 @@ export const EXPERIENCES = [
     location: "Remote, Canada",
     description: [
       "Develop responsive, production-ready web applications using Next.js, React, and TypeScript, delivering scalable user interfaces and modern component-based frontend architecture.",
-      "Build reusable React components and integrate REST APIs to improve maintainability, performance, and user experience.",
-      "Enhance CI/CD pipelines using GitHub Actions and Jenkins to improve deployment reliability and streamline software release workflows.",
+      "Build 50+ reusable React components and integrate 20+ REST APIs to improve maintainability, performance, and user experience.",
+      "Enhance CI/CD pipelines using GitHub Actions and Jenkins to improve deployment reliability and streamline software releases workflows.",
       "Collaborate through Git-based development workflows, contributing to feature development, code reviews, and iterative product delivery.",
-      "Refactor legacy frontend code into modular, reusable components while enforcing code quality with ESLint and Prettier.",
+      "Refactor legacy frontend code into modular, reusable, component-driven architecture while enforcing code quality with ESLint and Prettier.",
     ],
     technologies: [
       "Next.js",
