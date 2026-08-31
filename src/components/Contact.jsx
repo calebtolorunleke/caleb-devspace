@@ -10,8 +10,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: -40 }}
         transition={{ duration: 0.5 }}
         className="text-center text-3xl md:text-4xl font-semibold"
-      >
-        Let’s build something great together
+      >Let's Build Reliable Software  
       </motion.h2>
 
       <p className="text-center text-gray-500 mt-4 max-w-xl mx-auto">
