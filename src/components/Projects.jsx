@@ -37,8 +37,8 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
-  className="relative z-10 w-full h-64 sm:h-72 md:h-80 lg:h-[360px] rounded-2xl border border-stone-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-   />
+                    className="relative z-10 w-full h-64 sm:h-72 md:h-80 lg:h-[400px] rounded-2xl border border-stone-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
 
                   {/* subtle glow */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
