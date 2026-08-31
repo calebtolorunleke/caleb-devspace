@@ -1,9 +1,11 @@
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { PROJECTS } from "../constants/index";
 import { motion } from "framer-motion";
 
 const Projects = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   return (
     <div className="pb-24">
       {/* HEADER */}
@@ -11,13 +13,13 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.6 }}
-        className="my-20 text-center text-4xl font-semibold text-white"
+        className={`${isHome ? "my-20" : "mt-0 mb-20"} text-center text-4xl font-semibold text-white`}
       >
         Projects
       </motion.h2>
 
       <div className="space-y-24">
-        {PROJECTS.slice(0, 3).map((project, index) => {
+        {(isHome ? PROJECTS.slice(0, 3) : PROJECTS).map((project, index) => {
           const isEven = index % 2 === 0;
 
           return (
@@ -127,27 +129,29 @@ const Projects = () => {
           );
         })}
         {/* EXPLORE MORE */}{" "}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex justify-end pt-4"
-        >
-          <button
-            type="button"
-            onClick={() => {
-              navigate("/more-projects");
-              window.scrollTo(0, 0);
-            }}
-            className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white cursor-pointer"
+        {isHome && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-end pt-4"
           >
-            <span>Explore More</span>{" "}
-            <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </button>
-        </motion.div>
+            <button
+              type="button"
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate("/more-projects");
+              }}
+              className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white cursor-pointer"
+            >
+              <span>Explore More</span>{" "}
+              <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </button>
+          </motion.div>
+        )}
       </div>
     </div>
   );
