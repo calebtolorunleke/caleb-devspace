@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import { PROJECTS } from "../constants/index";
 import { motion } from "framer-motion";
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
     <div className="pb-24">
       {/* HEADER */}
@@ -21,7 +23,7 @@ const Projects = () => {
           return (
             <div
               key={project.title}
-              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
+              className={` flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
                 isEven ? "lg:flex-row" : "lg:flex-row-reverse"
               }`}
             >
@@ -134,6 +136,10 @@ const Projects = () => {
         >
           <button
             type="button"
+            onClick={() => {
+              navigate("/more-projects");
+              window.scrollTo(0, 0);
+            }}
             className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white cursor-pointer"
           >
             <span>Explore More</span>{" "}

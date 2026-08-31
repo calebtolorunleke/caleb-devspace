@@ -2,10 +2,12 @@ import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiX, HiOutlineDocumentText } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
+  const location = useLocation();
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -43,36 +45,37 @@ const Navbar = () => {
           Caleb<span className="text-purple-500">.</span>
         </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden items-center gap-8 md:flex">
-          <a href="#about" className={navLinkClass("about")}>
-            About
-            {activeSection === "about" && (
-              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-            )}
-          </a>
+        {location.pathname !== "/more-projects" && (
+          <div className="hidden items-center gap-8 md:flex">
+            <a href="#about" className={navLinkClass("about")}>
+              About
+              {activeSection === "about" && (
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+              )}
+            </a>
 
-          <a href="#projects" className={navLinkClass("projects")}>
-            Projects
-            {activeSection === "projects" && (
-              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-            )}
-          </a>
+            <a href="#projects" className={navLinkClass("projects")}>
+              Projects
+              {activeSection === "projects" && (
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+              )}
+            </a>
 
-          <a href="#experience" className={navLinkClass("experience")}>
-            Experience
-            {activeSection === "experience" && (
-              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-            )}
-          </a>
+            <a href="#experience" className={navLinkClass("experience")}>
+              Experience
+              {activeSection === "experience" && (
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+              )}
+            </a>
 
-          <a href="#educerts" className={navLinkClass("educerts")}>
-            Credentials
-            {activeSection === "educerts" && (
-              <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-            )}
-          </a>
-        </div>
+            <a href="#educerts" className={navLinkClass("educerts")}>
+              Credentials
+              {activeSection === "educerts" && (
+                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+              )}
+            </a>
+          </div>
+        )}
 
         {/* Right Side */}
         <div className="hidden items-center gap-4 md:flex">
@@ -125,53 +128,57 @@ const Navbar = () => {
             className="border-t border-stone-800 bg-black px-6 py-6 md:hidden"
           >
             <div className="flex flex-col gap-6">
-              <a
-                href="#about"
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  activeSection === "about"
-                    ? "text-purple-500"
-                    : "text-stone-300"
-                }`}
-              >
-                About
-              </a>
+              {location.pathname !== "/more-projects" && (
+                <div className="flex flex-col gap-6">
+                  <a
+                    href="#about"
+                    onClick={() => setIsOpen(false)}
+                    className={`${
+                      activeSection === "about"
+                        ? "text-purple-500"
+                        : "text-stone-300"
+                    }`}
+                  >
+                    About
+                  </a>
 
-              <a
-                href="#projects"
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  activeSection === "projects"
-                    ? "text-purple-500"
-                    : "text-stone-300"
-                }`}
-              >
-                Projects
-              </a>
+                  <a
+                    href="#projects"
+                    onClick={() => setIsOpen(false)}
+                    className={`${
+                      activeSection === "projects"
+                        ? "text-purple-500"
+                        : "text-stone-300"
+                    }`}
+                  >
+                    Projects
+                  </a>
 
-              <a
-                href="#experience"
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  activeSection === "experience"
-                    ? "text-purple-500"
-                    : "text-stone-300"
-                }`}
-              >
-                Experience
-              </a>
+                  <a
+                    href="#experience"
+                    onClick={() => setIsOpen(false)}
+                    className={`${
+                      activeSection === "experience"
+                        ? "text-purple-500"
+                        : "text-stone-300"
+                    }`}
+                  >
+                    Experience
+                  </a>
 
-              <a
-                href="#educerts"
-                onClick={() => setIsOpen(false)}
-                className={`${
-                  activeSection === "educerts"
-                    ? "text-purple-500"
-                    : "text-stone-300"
-                }`}
-              >
-                Credentials
-              </a>
+                  <a
+                    href="#educerts"
+                    onClick={() => setIsOpen(false)}
+                    className={`${
+                      activeSection === "educerts"
+                        ? "text-purple-500"
+                        : "text-stone-300"
+                    }`}
+                  >
+                    Credentials
+                  </a>
+                </div>
+              )}
 
               <a
                 href="/Caleb_Resume.pdf"
