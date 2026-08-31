@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="pb-16">
+    <div className="pb-24">
       {/* HEADER */}
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
@@ -130,11 +130,11 @@ const Projects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex justify-center pt-4"
+          className="flex justify-end pt-4"
         >
           <button
             type="button"
-            className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white"
+            className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white cursor-pointer"
           >
             <span>Explore More</span>{" "}
             <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
