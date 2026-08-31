@@ -15,7 +15,7 @@ const Projects = () => {
       </motion.h2>
 
       <div className="space-y-24">
-        {PROJECTS.map((project, index) => {
+        {PROJECTS.slice(0, 3).map((project, index) => {
           const isEven = index % 2 === 0;
 
           return (
@@ -36,8 +36,9 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full max-w-md rounded-2xl shadow-xl transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
+                    loading="lazy"
+  className="relative z-10 w-full h-64 sm:h-72 md:h-80 lg:h-[360px] rounded-2xl border border-stone-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+   />
 
                   {/* subtle glow */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-indigo-500/10 to-purple-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition" />
@@ -51,13 +52,37 @@ const Projects = () => {
                 transition={{ duration: 0.8 }}
                 className="w-full lg:w-1/2"
               >
-                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-3">
+                {/* PROJECT META */}
+                <div className="flex flex-wrap items-center gap-2 mb-4">
+                  <span className="text-sm font-medium text-indigo-300">
+                    {project.role}
+                  </span>
+
+                  <span className="text-stone-600">•</span>
+
+                  <span className="text-sm text-stone-400">
+                    {project.category}
+                  </span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
                   {project.title}
                 </h3>
 
-                <p className="text-stone-400 leading-relaxed mb-5">
+                <ul className="mb-6 space-y-2">
+                  {project.highlights?.slice(0, 3).map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="flex gap-3 text-sm leading-relaxed text-stone-400"
+                    >
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-stone-500" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* <p className="text-stone-400 leading-relaxed mb-5">
                   {project.description}
-                </p>
+                </p> */}
 
                 {/* TECH STACK */}
                 <div className="flex flex-wrap gap-2 mb-6">
