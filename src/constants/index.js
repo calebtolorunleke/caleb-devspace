@@ -26,7 +26,7 @@ export const EXPERIENCES = [
     description: [
       "Develop responsive, production-ready web applications using Next.js, React, and TypeScript, delivering scalable user interfaces and modern component-based frontend architecture.",
       "Build 50+ reusable React components and integrate 20+ REST APIs to improve maintainability, performance, and user experience.",
-      "Enhance CI/CD pipelines using GitHub Actions and Jenkins to improve deployment reliability and streamline software releases workflows.",
+      "Enhance CI/CD pipelines using GitHub Actions and Jenkins to improve deployment reliability and streamline software release workflows.",
       "Collaborate through Git-based development workflows, contributing to feature development, code reviews, and iterative product delivery.",
       "Refactor legacy frontend code into modular, reusable, component-driven architecture while enforcing code quality with ESLint and Prettier.",
     ],
@@ -143,8 +143,8 @@ export const PROJECTS = [
       "GitHub",
       "Vercel",
     ],
-    demo: "",
-    github: "",
+    demo: "https://moon-ecommerce-app.vercel.app/",
+    github: "https://github.com/calebtolorunleke/moon-ecommerce",
   },
 
   {
@@ -157,7 +157,7 @@ export const PROJECTS = [
     featured: true,
     image: eventra,
     description:
-      "A responsive event-discovery platform that allows users to explore event listings through categorized browsing, reusable event cards, organizer information, testimonials, and API-driven content.",
+      "Built a full-stack event discovery platform with React, Node.js, and Express, integrating REST APIs for dynamic event data and implementing reusable components for categorized event browsing.",
     highlights: [
       "Built a component-driven React interface with reusable event, category, organizer, and content components.",
       "Developed and deployed an Express REST API that provides structured event data to the frontend.",
@@ -313,7 +313,7 @@ export const certifications = [
 
 export const CONTACT = {
   address: "Vancouver, British Columbia, Canada",
-  phoneNo: "+1 (236) 335-7976",
+  phoneNo: "",
   email: "calebtolorunleke@yahoo.com",
   linkedin: "https://www.linkedin.com/in/calebtolorunleke",
   github: "https://github.com/calebtolorunleke",
