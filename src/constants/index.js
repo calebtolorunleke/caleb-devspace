@@ -5,11 +5,11 @@ import skillPath from "../assets/projects/skillpath.png";
 import spendWise from "../assets/projects/project2.png";
 
 export const HERO_CONTENT = `
-Frontend-Focused Full-Stack Engineer with experience building scalable React and Next.js applications and supporting high-availability production systems across fintech and enterprise environments. I combine user-focused frontend engineering with TypeScript, Node.js, REST API integration, CI/CD, observability, automation, and production reliability to deliver maintainable software from development through deployment.
+Frontend-Focused Full-Stack Software Engineer with experience building scalable React and Next.js applications and supporting high-availability production systems across fintech and enterprise environments. I combine user-focused frontend engineering with TypeScript, Node.js, REST API integration, CI/CD, observability, automation, and production reliability to deliver maintainable software from development through deployment.
 `;
 
 export const ABOUT_TEXT = `
-I'm a Frontend-Focused Full-Stack Engineer with experience building responsive web applications and supporting business-critical production systems.
+I'm a Frontend-Focused Full-Stack Software Engineer with experience building responsive web applications and supporting business-critical production systems.
 
 My frontend work focuses on React, Next.js, TypeScript, reusable component architecture, responsive design, REST API integration, and application performance. I also bring hands-on experience with CI/CD pipelines, production monitoring, incident investigation, root-cause analysis, automation, and release reliability.
 
