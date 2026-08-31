@@ -147,7 +147,7 @@ export const PROJECTS = [
       "GitHub",
       "Vercel",
     ],
-    demo: "YOUR_DRIVEORA_LIVE_URL",
+    demo: "https://driveora.vercel.app/",
     github: "https://github.com/calebtolorunleke/Driveora",
   },
 
@@ -158,7 +158,7 @@ export const PROJECTS = [
     category: "E-Commerce · Collaborative Project",
     role: "Primary Frontend Contributor",
     status: "Featured",
-    featured: false,
+    featured: true,
     image: moon,
     description:
       "Served as the primary frontend contributor on a three-developer e-commerce application, owning shared frontend architecture, routing, reusable layouts, integration workflows, and code-review coordination.",
