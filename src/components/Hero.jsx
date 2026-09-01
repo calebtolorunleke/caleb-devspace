@@ -106,7 +106,7 @@ const Hero = () => {
               font-medium
               "
             >
-              Frontend-Focused Full Stack Software Engineer
+              Frontend-Focused Full-Stack Software Engineer
             </motion.p>
 
             <motion.p

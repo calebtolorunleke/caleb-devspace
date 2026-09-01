@@ -5,8 +5,7 @@ import skillPath from "../assets/projects/skillpath.png";
 import spendWise from "../assets/projects/project2.png";
 import driveora from "../assets/projects/driveora.png";
 
-export const HERO_CONTENT = `
-Software Engineer focused on building scalable web applications and reliable production systems. Experienced with React, Next.js, TypeScript, Node.js, REST APIs, CI/CD, AWS, observability, and automation across fintech and enterprise environments.`;
+export const HERO_CONTENT = `Building scalable web applications and reliable production systems. Experienced with React, Next.js, TypeScript, Node.js, REST APIs, CI/CD, AWS, observability, and automation across fintech and enterprise environments.`;
 
 export const ABOUT_TEXT = `
 I'm a Frontend-Focused Full-Stack Software Engineer with experience building responsive web applications and supporting business-critical production systems.
@@ -115,6 +114,7 @@ export const EXPERIENCES = [
     ],
   },
 ];
+
 export const PROJECTS = [
   {
     id: 1,
@@ -127,14 +127,13 @@ export const PROJECTS = [
     image: driveora,
     description:
       "Designed and built a full-stack car rental and booking platform independently, owning the application architecture, frontend experience, backend services, API integration, authentication, booking workflows, and deployment.",
+
     highlights: [
-      "Designed and implemented the frontend and backend architecture, structuring reusable components, routes, services, APIs, and data flows for maintainable development.",
-      "Built responsive vehicle discovery and booking workflows with dynamic vehicle data, filtering, form handling, validation, and user-focused interaction patterns.",
-      "Developed REST APIs and backend services to manage application data and connect frontend workflows with server-side business logic.",
-      "Implemented authentication and user flows to support secure access, personalized experiences, and rental-related functionality.",
-      "Handled client-side state, loading states, validation, error handling, and API integration across the application to deliver a reliable end-to-end experience.",
-      "Independently managed development, debugging, integration, testing, and deployment across the full application lifecycle.",
+      "Designed the full-stack architecture across React, Express.js, REST APIs, and MongoDB, structuring reusable components, routes, services, and data flows for maintainable development.",
+      "Engineered the vehicle discovery and booking workflow with dynamic data, filtering, form validation, authentication, and booking availability logic to support reliable end-to-end reservations.",
+      "Implemented client-server integration, state management, loading and error handling, and backend business logic, then independently debugged, tested, and deployed the application to production.",
     ],
+
     technologies: [
       "React",
       "JavaScript",
@@ -147,6 +146,7 @@ export const PROJECTS = [
       "GitHub",
       "Vercel",
     ],
+
     demo: "https://driveora.vercel.app/",
     github: "https://github.com/calebtolorunleke/Driveora",
   },
@@ -162,12 +162,13 @@ export const PROJECTS = [
     image: moon,
     description:
       "Served as the primary frontend contributor on a three-developer e-commerce application, owning shared frontend architecture, routing, reusable layouts, integration workflows, and code-review coordination.",
+
     highlights: [
-      "Established the shared folder structure, routing strategy, page layouts, and reusable component architecture used across the application.",
-      "Built and integrated responsive product, collection, brand, blog, and newsletter experiences across the application.",
-      "Led pull-request reviews, merge coordination, and integration workflows to maintain code quality and a stable main branch.",
-      "Resolved cross-feature integration issues and coordinated frontend changes across a multi-developer Git workflow.",
+      "Established the shared frontend architecture, folder structure, routing strategy, page layouts, and reusable component patterns used by a three-developer team.",
+      "Built and integrated responsive product, collection, brand, blog, and newsletter experiences while maintaining consistent component behavior across multiple application areas.",
+      "Led Git-based integration and pull-request reviews, resolving cross-feature conflicts and coordinating changes to maintain code quality and a stable main branch.",
     ],
+
     technologies: [
       "React",
       "Vite",
@@ -179,6 +180,7 @@ export const PROJECTS = [
       "GitHub",
       "Vercel",
     ],
+
     demo: "https://moon-ecommerce-app.vercel.app/",
     github: "https://github.com/calebtolorunleke/moon-ecommerce",
   },
@@ -194,12 +196,13 @@ export const PROJECTS = [
     image: eventra,
     description:
       "Built and deployed a full-stack event discovery platform using React, Node.js, and Express, integrating a custom REST API with a reusable frontend architecture and production deployment workflow.",
+
     highlights: [
-      "Designed and built reusable React components for event cards, categories, organizers, testimonials, navigation, and content sections.",
-      "Developed and deployed an Express.js REST API to provide structured event data to the React frontend.",
-      "Implemented API integration, environment-based configuration, and client-server communication across development and production environments.",
-      "Diagnosed and resolved CORS, deployment, and cross-environment integration issues during development and production deployment.",
+      "Designed and built a reusable React frontend architecture for event discovery, including event cards, categories, organizers, navigation, testimonials, and content-driven sections.",
+      "Developed and deployed an Express.js REST API and integrated it with the React client, establishing structured data flows between frontend components and backend services.",
+      "Diagnosed and resolved CORS, environment configuration, API integration, and deployment issues across development and production environments to deliver a working full-stack application.",
     ],
+
     technologies: [
       "React",
       "Vite",
@@ -211,6 +214,7 @@ export const PROJECTS = [
       "Material UI",
       "Vercel",
     ],
+
     demo: "https://eventra-rouge.vercel.app/",
     github: "https://github.com/calebtolorunleke/eventra",
   },
@@ -226,12 +230,13 @@ export const PROJECTS = [
     image: quickDine,
     description:
       "An in-development restaurant discovery and reservation platform focused on authentication, role-based user flows, reusable application architecture, and frontend-to-backend integration.",
+
     highlights: [
-      "Built reusable authentication experiences including sign-in, sign-up, authentication modals, and role-selection flows.",
-      "Implemented controlled forms, conditional rendering, and structured client-side state management for user interactions.",
-      "Organized routes, components, application data, and backend integration concerns to support incremental feature development.",
-      "Designed the application architecture to support future restaurant discovery, reservation, and user-management capabilities.",
+      "Built reusable authentication flows for sign-in, sign-up, authentication modals, and role selection using structured React components and controlled forms.",
+      "Implemented client-side state management, conditional rendering, form validation, and routing to support consistent user interactions across authentication and application flows.",
+      "Structured frontend, routing, application data, and backend integration concerns to create an extensible foundation for restaurant discovery, reservations, and user management.",
     ],
+
     technologies: [
       "React",
       "Vite",
@@ -242,6 +247,7 @@ export const PROJECTS = [
       "Express.js",
       "REST APIs",
     ],
+
     demo: "",
     github: "",
   },
@@ -257,11 +263,13 @@ export const PROJECTS = [
     image: skillPath,
     description:
       "A responsive learning-platform interface built with reusable React components and a maintainable presentation architecture across mobile, tablet, and desktop experiences.",
+
     highlights: [
-      "Built reusable components for course sections, testimonials, partner content, navigation, and calls to action.",
-      "Implemented responsive layouts and consistent UI behavior across mobile, tablet, and desktop viewports.",
-      "Separated content data from presentation components to improve maintainability and reduce duplicated UI logic.",
+      "Designed reusable React components for course sections, testimonials, partner content, navigation, and calls to action, reducing duplicated presentation logic.",
+      "Implemented responsive layouts and consistent component behavior across mobile, tablet, and desktop breakpoints.",
+      "Separated application content from presentation components to improve maintainability and make content updates independent of UI implementation.",
     ],
+
     technologies: [
       "React",
       "JavaScript",
@@ -270,6 +278,7 @@ export const PROJECTS = [
       "React Fast Marquee",
       "React Icons",
     ],
+
     demo: "",
     github: "https://github.com/calebtolorunleke/skillpath",
   },
@@ -285,11 +294,13 @@ export const PROJECTS = [
     image: spendWise,
     description:
       "A TypeScript-based React finance dashboard demonstrating reusable application architecture, client-side state management, and interactive financial data visualization.",
+
     highlights: [
-      "Built reusable dashboard components for financial summaries, analytics, transactions, and navigation.",
-      "Implemented interactive financial visualizations using Recharts to present structured financial data clearly.",
-      "Used TypeScript and Context API to improve state consistency, component contracts, and maintainability.",
+      "Built reusable dashboard components for financial summaries, analytics, transactions, and navigation using a modular React architecture.",
+      "Implemented interactive financial visualizations with Recharts to transform structured financial data into readable analytics and dashboard insights.",
+      "Applied TypeScript and Context API to enforce stronger component contracts and maintain consistent client-side state across the application.",
     ],
+
     technologies: [
       "React",
       "TypeScript",
@@ -298,6 +309,7 @@ export const PROJECTS = [
       "Context API",
       "Recharts",
     ],
+
     demo: "https://spending-wise.vercel.app/",
     github: "https://github.com/calebtolorunleke/spendwise",
   },
