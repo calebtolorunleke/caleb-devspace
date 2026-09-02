@@ -88,16 +88,20 @@ const Navbar = ({ isDark, setIsDark }) => {
         <div className="hidden items-center gap-4 md:flex">
           <button
             onClick={() => updateMode()}
-            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
+            className="text-xl  transition hover:scale-110 "
           >
-            {isDark ? <MdLightMode /> : <MdDarkMode className="text-black" />}
+            {isDark ? (
+              <MdLightMode className="text-stone-400 hover:text-white" />
+            ) : (
+              <MdDarkMode className="text-black/80 hover:text-black" />
+            )}
           </button>
 
           <a
             href="/Caleb_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm  transition hover:border-purple-500 `}
+            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/80 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm  transition hover:border-purple-500 `}
           >
             <HiOutlineDocumentText />
             Resume
