@@ -101,7 +101,7 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="/Caleb_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/80 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm  transition hover:border-purple-500 `}
+            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-500 px-4 py-2 text-sm  transition hover:border-purple-500 `}
           >
             <HiOutlineDocumentText />
             Resume
@@ -111,7 +111,7 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="https://github.com/calebtolorunleke"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${isDark ? "text-stone-300" : "text-black"}  text-xl transition hover:scale-110 hover:text-white`}
+            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"}  text-xl transition hover:scale-110 `}
           >
             <FaGithub />
           </a>
