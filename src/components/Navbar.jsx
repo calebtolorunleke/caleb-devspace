@@ -42,7 +42,7 @@ const Navbar = ({ isDark, setIsDark }) => {
     setIsDark((prev) => !prev);
   };
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <nav className={`${isDark? 'border-white/10 bg-black/70': 'border-black/10 bg-white'} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
         <a href="/" className="text-2xl font-bold tracking-tight text-white">
