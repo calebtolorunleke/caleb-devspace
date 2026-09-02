@@ -41,7 +41,7 @@ const Navbar = ({ isDark, setIsDark }) => {
   };
   return (
     <nav
-      className={`${isDark ? "border-white/10 bg-black/70" : "border-black/10 bg-white/70"} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}
+      className={`${isDark ? "border-white/10 bg-black/70" : "border-black/10 bg-white"} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
@@ -90,14 +90,14 @@ const Navbar = ({ isDark, setIsDark }) => {
             onClick={() => updateMode()}
             className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
           >
-            {isDark ? <MdLightMode /> : <MdDarkMode />}
+            {isDark ? <MdLightMode /> : <MdDarkMode className="text-black" />}
           </button>
 
           <a
             href="/Caleb_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm text-stone-300 transition hover:border-purple-500 hover:text-white"
+            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-700 px-4 py-2 text-sm  transition hover:border-purple-500 `}
           >
             <HiOutlineDocumentText />
             Resume
@@ -107,7 +107,7 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="https://github.com/calebtolorunleke"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
+            className={`${isDark ? "text-stone-300" : "text-black"}  text-xl transition hover:scale-110 hover:text-white`}
           >
             <FaGithub />
           </a>
