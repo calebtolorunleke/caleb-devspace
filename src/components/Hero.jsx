@@ -80,13 +80,11 @@ const Hero = ({ isDark, setIsDark }) => {
           >
             <motion.h1
               variants={childVariants}
-              className="
-              text-5xl
+              className={`${isDark ? "text-white/70" : "text-black"} text-5xl
               sm:text-6xl
               lg:text-7xl
               font-semibold
-              tracking-[-0.05em]
-              "
+              tracking-[-0.05em]`}
             >
               Caleb Adebayo
             </motion.h1>
