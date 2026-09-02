@@ -40,6 +40,15 @@ const Home = () => {
 const App = () => {
   const [isDark, setIsDark] = useState(false);
 
+
+  const saved = localStorage.getItem("theme");
+    if (saved !== null) return saved === "dark";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  }, [isDark];)
   return (
     <BrowserRouter>
       <div className="overflow-x-hidden text-stone-300 antialiased">
