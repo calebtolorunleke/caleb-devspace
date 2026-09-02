@@ -29,7 +29,7 @@ const childVariants = {
   },
 };
 
-const Hero = () => {
+const Hero = ({ isDark, setIsDark }) => {
   return (
     <section className="pb-10 lg:pb-5">
       <div className="flex flex-wrap lg:flex-row-reverse items-center">
