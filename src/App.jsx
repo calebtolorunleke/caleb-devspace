@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import { Analytics } from "@vercel/analytics/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   return (
@@ -38,17 +38,14 @@ const Home = () => {
 };
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
-
-
-  const saved = localStorage.getItem("theme");
-    if (saved !== null) return saved === "dark";
-    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem("isDark");
+    return savedTheme !== null ? JSON.parse(savedTheme) : true;
   });
 
   useEffect(() => {
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  }, [isDark];)
+    localStorage.setItem("isDark", JSON.stringify(isDark));
+  }, [isDark]);
   return (
     <BrowserRouter>
       <div className="overflow-x-hidden text-stone-300 antialiased">
