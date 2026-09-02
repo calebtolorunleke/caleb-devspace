@@ -32,20 +32,23 @@ const Navbar = ({ isDark, setIsDark }) => {
   }, []);
 
   const navLinkClass = (section) =>
-    `relative text-sm transition ${
-      activeSection === section
-        ? "text-white"
-        : "text-stone-300 hover:text-white"
+    `${isDark ? "text-white " : "text-black "} relative text-sm transition duration-300 hover:font-bold ${
+      activeSection === section && " font-bold text-stone-10 "
     }`;
 
   const updateMode = () => {
     setIsDark((prev) => !prev);
   };
   return (
-    <nav className={`${isDark? 'border-white/10 bg-black/70': 'border-black/10 bg-white'} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}>
+    <nav
+      className={`${isDark ? "border-white/10 bg-black/70" : "border-black/10 bg-white/70"} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold tracking-tight text-white">
+        <a
+          href="/"
+          className={`${isDark ? "text-white" : "text-black"} text-2xl font-bold tracking-tight`}
+        >
           Caleb<span className="text-purple-500">.</span>
         </a>
 
