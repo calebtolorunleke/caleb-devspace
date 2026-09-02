@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Technologies from "./components/Technologies";
 import { Analytics } from "@vercel/analytics/react";
+import { useState } from "react";
 
 const Home = () => {
   return (
@@ -37,6 +38,8 @@ const Home = () => {
 };
 
 const App = () => {
+  const [isDark, setIsDark] = useState(true);
+
   return (
     <BrowserRouter>
       <div className="overflow-x-hidden text-stone-300 antialiased">
@@ -49,7 +52,7 @@ const App = () => {
 
         {/* NAVBAR */}
         <div className="container mx-auto px-8 pt-28">
-          <Navbar />
+          <Navbar isDark={isDark} setIsDark={setIsDark} />
 
           {/* ROUTES */}
           <Routes>

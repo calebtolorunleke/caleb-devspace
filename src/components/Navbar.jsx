@@ -3,8 +3,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMenuAlt3, HiX, HiOutlineDocumentText } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
-const Navbar = () => {
+const Navbar = ({ isDark, setIsDark }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
   const location = useLocation();
@@ -37,6 +38,9 @@ const Navbar = () => {
         : "text-stone-300 hover:text-white"
     }`;
 
+  const updateMode = () => {
+    setIsDark((prev) => !prev);
+  };
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
@@ -79,6 +83,13 @@ const Navbar = () => {
 
         {/* Right Side */}
         <div className="hidden items-center gap-4 md:flex">
+          <button
+            onClick={() => updateMode()}
+            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
+          >
+            {isDark ? <MdLightMode /> : <MdDarkMode />}
+          </button>
+
           <a
             href="/Caleb_Resume.pdf"
             target="_blank"
