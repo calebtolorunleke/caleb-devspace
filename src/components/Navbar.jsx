@@ -23,7 +23,7 @@ const Navbar = ({ isDark, setIsDark }) => {
       },
       {
         threshold: 0.4,
-      },
+      }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -32,68 +32,62 @@ const Navbar = ({ isDark, setIsDark }) => {
   }, []);
 
   const navLinkClass = (section) =>
-    `${isDark ? "text-white " : "text-black "} relative text-sm transition duration-300 hover:font-bold ${
-      activeSection === section && " font-bold text-stone-10 "
-    }`;
+    `relative text-sm transition duration-300 ${
+      isDark ? "text-white" : "text-black"
+    } ${activeSection === section ? "font-bold" : "hover:font-bold"}`;
 
   const updateMode = () => {
     setIsDark((prev) => !prev);
   };
+
   return (
     <nav
-      className={`${isDark ? "border-white/10 bg-black/70" : "border-black/10 bg-white"} fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}
+      className={`${
+        isDark ? "border-white/10 bg-black/70" : "border-black/10 bg-white/70"
+      } fixed top-0 left-0 right-0 z-50 border-b backdrop-blur-xl`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
         <a
           href="/"
-          className={`${isDark ? "text-white" : "text-black"} text-2xl font-bold tracking-tight`}
+          className={`${
+            isDark ? "text-white" : "text-black"
+          } text-2xl font-bold tracking-tight`}
         >
           Caleb<span className="text-purple-500">.</span>
         </a>
 
+        {/* Desktop Links */}
         {location.pathname !== "/more-projects" && (
           <div className="hidden items-center gap-8 md:flex">
-            <a href="#about" className={navLinkClass("about")}>
-              About
-              {activeSection === "about" && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-              )}
-            </a>
-
-            <a href="#projects" className={navLinkClass("projects")}>
-              Projects
-              {activeSection === "projects" && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-              )}
-            </a>
-
-            <a href="#experience" className={navLinkClass("experience")}>
-              Experience
-              {activeSection === "experience" && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-              )}
-            </a>
-
-            <a href="#educerts" className={navLinkClass("educerts")}>
-              Credentials
-              {activeSection === "educerts" && (
-                <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
-              )}
-            </a>
+            {["about", "projects", "experience", "educerts"].map((section) => (
+              <a
+                key={section}
+                href={`#${section}`}
+                className={navLinkClass(section)}
+              >
+                {section === "educerts"
+                  ? "Credentials"
+                  : section.charAt(0).toUpperCase() + section.slice(1)}
+                {activeSection === section && (
+                  <span className="absolute -bottom-2 left-0 h-[2px] w-full bg-purple-500" />
+                )}
+              </a>
+            ))}
           </div>
         )}
 
-        {/* Right Side */}
+        {/* Desktop Right Actions */}
         <div className="hidden items-center gap-4 md:flex">
           <button
-            onClick={() => updateMode()}
-            className="text-xl  transition hover:scale-110 "
+            onClick={updateMode}
+            className="text-xl transition hover:scale-110"
+            aria-label="Toggle Dark Mode"
           >
             {isDark ? (
               <MdLightMode className="text-stone-400 hover:text-white" />
             ) : (
-              <MdDarkMode className="text-black/80 hover:text-black" />
+              <MdDarkMode className="text-black/70 hover:text-black" />
             )}
           </button>
 
@@ -101,7 +95,11 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="/Caleb_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"} flex items-center gap-2 rounded-full border border-stone-500 px-4 py-2 text-sm  transition hover:border-purple-500 `}
+            className={`${
+              isDark
+                ? "text-stone-300 hover:text-white"
+                : "text-black/70 hover:text-black"
+            } flex items-center gap-2 rounded-full border border-stone-500 px-4 py-2 text-sm transition hover:border-purple-500`}
           >
             <HiOutlineDocumentText />
             Resume
@@ -111,7 +109,11 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="https://github.com/calebtolorunleke"
             target="_blank"
             rel="noopener noreferrer"
-            className={`${isDark ? "text-stone-300 hover:text-white" : "text-black/70 hover:text-black"}  text-xl transition hover:scale-110 `}
+            className={`${
+              isDark
+                ? "text-stone-300 hover:text-white"
+                : "text-black/70 hover:text-black"
+            } text-xl transition hover:scale-110`}
           >
             <FaGithub />
           </a>
@@ -120,22 +122,41 @@ const Navbar = ({ isDark, setIsDark }) => {
             href="https://www.linkedin.com/in/calebtol/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-stone-400 transition hover:scale-110 hover:text-white"
+            className={`${
+              isDark
+                ? "text-stone-300 hover:text-white"
+                : "text-black/70 hover:text-black"
+            } text-xl transition hover:scale-110`}
           >
             <FaLinkedin />
           </a>
         </div>
 
-        {/* Mobile Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-3xl text-white md:hidden"
-        >
-          {isOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
-        </button>
+        {/* Mobile Action Controls */}
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            onClick={updateMode}
+            className="text-xl"
+            aria-label="Toggle Dark Mode"
+          >
+            {isDark ? (
+              <MdLightMode className="text-stone-400" />
+            ) : (
+              <MdDarkMode className="text-black/70" />
+            )}
+          </button>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`text-3xl ${isDark ? "text-white" : "text-black"}`}
+            aria-label="Toggle Navigation Menu"
+          >
+            {isOpen ? <HiX /> : <HiOutlineMenuAlt3 />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -143,58 +164,36 @@ const Navbar = ({ isDark, setIsDark }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.2 }}
-            className="border-t border-stone-800 bg-black px-6 py-6 md:hidden"
+            className={`border-t px-6 py-6 md:hidden ${
+              isDark
+                ? "border-stone-800 bg-black text-stone-300"
+                : "border-stone-200 bg-white text-stone-700"
+            }`}
           >
             <div className="flex flex-col gap-6">
               {location.pathname !== "/more-projects" && (
                 <div className="flex flex-col gap-6">
-                  <a
-                    href="#about"
-                    onClick={() => setIsOpen(false)}
-                    className={`${
-                      activeSection === "about"
-                        ? "text-purple-500"
-                        : "text-stone-300"
-                    }`}
-                  >
-                    About
-                  </a>
-
-                  <a
-                    href="#projects"
-                    onClick={() => setIsOpen(false)}
-                    className={`${
-                      activeSection === "projects"
-                        ? "text-purple-500"
-                        : "text-stone-300"
-                    }`}
-                  >
-                    Projects
-                  </a>
-
-                  <a
-                    href="#experience"
-                    onClick={() => setIsOpen(false)}
-                    className={`${
-                      activeSection === "experience"
-                        ? "text-purple-500"
-                        : "text-stone-300"
-                    }`}
-                  >
-                    Experience
-                  </a>
-
-                  <a
-                    href="#educerts"
-                    onClick={() => setIsOpen(false)}
-                    className={`${
-                      activeSection === "educerts"
-                        ? "text-purple-500"
-                        : "text-stone-300"
-                    }`}
-                  >
-                    Credentials
-                  </a>
+                  {[
+                    { id: "about", label: "About" },
+                    { id: "projects", label: "Projects" },
+                    { id: "experience", label: "Experience" },
+                    { id: "educerts", label: "Credentials" },
+                  ].map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      onClick={() => setIsOpen(false)}
+                      className={`${
+                        activeSection === item.id
+                          ? "font-bold text-purple-500"
+                          : isDark
+                          ? "text-stone-300"
+                          : "text-stone-700"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  ))}
                 </div>
               )}
 
@@ -202,7 +201,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                 href="/Caleb_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-stone-300 hover:text-white"
+                className="flex items-center gap-2 hover:text-purple-500"
               >
                 <HiOutlineDocumentText />
                 Resume
@@ -213,7 +212,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                   href="https://github.com/calebtolorunleke"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-stone-400 hover:text-white"
+                  className={isDark ? "text-stone-400 hover:text-white" : "text-stone-600 hover:text-black"}
                 >
                   <FaGithub />
                 </a>
@@ -222,7 +221,7 @@ const Navbar = ({ isDark, setIsDark }) => {
                   href="https://www.linkedin.com/in/calebtol/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-stone-400 hover:text-white"
+                  className={isDark ? "text-stone-400 hover:text-white" : "text-stone-600 hover:text-black"}
                 >
                   <FaLinkedin />
                 </a>

@@ -38,7 +38,7 @@ const Home = () => {
 };
 
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState();
 
   return (
     <BrowserRouter>
