@@ -93,31 +93,19 @@ const Hero = ({ isDark, setIsDark }) => {
 
             <motion.p
               variants={childVariants}
-              className="
-              mt-4
-              bg-gradient-to-r
-              from-white
-              via-stone-300
-              to-stone-500
-              bg-clip-text
-              text-transparent
-              text-xl
-              lg:text-2xl
-              font-medium
-              "
+              className={`mt-4 bg-gradient-to-r ${
+                isDark ? "from-white" : "from-black"
+              } via-stone-500 to-stone-700 bg-clip-text text-xl font-medium text-transparent lg:text-2xl`}
             >
               Frontend-Focused Full-Stack Software Engineer
             </motion.p>
 
             <motion.p
               variants={childVariants}
-              className="
-              mt-6
+              className={`${isDark ? "text-stone-400" : "text-black"} mt-6
               max-w-3xl
               text-lg
-              text-stone-400
-              leading-relaxed
-              "
+              leading-relaxed`}
             >
               {HERO_CONTENT}
             </motion.p>
