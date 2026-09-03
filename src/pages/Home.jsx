@@ -1,20 +1,19 @@
-import React from 'react'
-import Hero from '../components/Hero';
-import Technologies from '../components/Technologies';
-import Projects from '../components/Projects';
-import Experience from '../components/Experience';
-import Educerts from '../components/Educerts';
-import Contact from '../components/Contact';
+import React from "react";
+import Hero from "../components/Hero";
+import Technologies from "../components/Technologies";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
+import Educerts from "../components/Educerts";
+import Contact from "../components/Contact";
 
-const Home = ({isDark, setIsDark}) => {
-
+const Home = ({ isDark, setIsDark }) => {
   return (
     <>
       <section id="about" className="scroll-mt-24">
         <Hero isDark={isDark} setIsDark={setIsDark} />
       </section>
 
-      <Technologies />
+      <Technologies isDark={isDark} setIsDark={setIsDark} />
 
       <section id="projects" className="scroll-mt-24">
         <Projects />
@@ -33,7 +32,6 @@ const Home = ({isDark, setIsDark}) => {
       </section>
     </>
   );
+};
 
-}
-
-export default Home
+export default Home;
