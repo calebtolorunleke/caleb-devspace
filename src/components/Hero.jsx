@@ -124,18 +124,16 @@ const Hero = ({ isDark, setIsDark }) => {
 
               <a
                 href="#projects"
-                className="
-                rounded-full
-                bg-white
-                text-black
+                className={`${isDark ? "text-black bg-white hover:bg-stone-200" : "text-white bg-black hover:bg-stone-600"} rounded-full
+                
+                
                 px-7
                 py-3.5
                 font-medium
                 transition-all
                 duration-300
                 hover:scale-[1.03]
-                hover:bg-stone-200
-                "
+                `}
               >
                 View Projects
               </a>
@@ -146,11 +144,8 @@ const Hero = ({ isDark, setIsDark }) => {
                 href="./Caleb_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="
-                rounded-full
+                className={`${isDark ? "border-white/15 bg-white/[0.03] hover:border-white/30 hover:bg-white/[0.06]" : "text-black border-black/15 bg-black/[0.03] hover:border-black/30 hover:bg-black/[0.06]"} rounded-full
                 border
-                border-white/15
-                bg-white/[0.03]
                 backdrop-blur-sm
                 px-7
                 py-3.5
@@ -160,10 +155,7 @@ const Hero = ({ isDark, setIsDark }) => {
                 font-medium
                 transition-all
                 duration-300
-                hover:border-white/30
-                hover:bg-white/[0.06]
-                hover:scale-[1.03]
-                "
+                hover:scale-[1.03]`}
               >
                 View Resume
                 <HiArrowUpRight
