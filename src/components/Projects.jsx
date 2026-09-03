@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { PROJECTS } from "../constants/index";
 import { motion } from "framer-motion";
 
-const Projects = () => {
+const Projects = ({ isDark }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === "/";
@@ -13,7 +13,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.6 }}
-        className={`${isHome ? "my-20" : "mt-0 mb-20"} text-center text-4xl font-semibold text-white`}
+        className={`${isHome ? "my-20" : "mt-0 mb-20"} text-center text-4xl font-semibold  ${isDark ? "text-white" : "text-black"}`}
       >
         Projects
       </motion.h2>
@@ -41,7 +41,7 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     loading="lazy"
-                    className="relative z-10 w-full h-64 sm:h-72 md:h-80 lg:h-[400px] rounded-2xl border border-stone-800 object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                    className={`${isDark ? "border-stone-800" : "border-stone-200"} relative z-10 w-full h-64 sm:h-72 md:h-80 lg:h-[400px] rounded-2xl border  object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]`}
                   />
 
                   {/* subtle glow */}

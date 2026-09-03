@@ -20,7 +20,7 @@ const App = () => {
     localStorage.setItem("isDark", JSON.stringify(isDark));
   }, [isDark]);
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <div className="overflow-x-hidden text-stone-300 antialiased">
         {/* BACKGROUND */}
         <div className="fixed inset-0 -z-10">

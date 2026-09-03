@@ -16,7 +16,7 @@ const Home = ({ isDark, setIsDark }) => {
       <Technologies isDark={isDark} setIsDark={setIsDark} />
 
       <section id="projects" className="scroll-mt-24">
-        <Projects />
+        <Projects isDark={isDark} setIsDark={setIsDark} />
       </section>
 
       <section id="experience" className="scroll-mt-24">
