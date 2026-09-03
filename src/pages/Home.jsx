@@ -20,7 +20,7 @@ const Home = ({ isDark, setIsDark }) => {
       </section>
 
       <section id="experience" className="scroll-mt-24">
-        <Experience />
+        <Experience isDark={isDark} />
       </section>
 
       <section id="educert" className="scroll-mt-24">

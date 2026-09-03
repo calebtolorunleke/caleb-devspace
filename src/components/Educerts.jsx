@@ -3,10 +3,7 @@ import { education, certifications } from "../constants/index";
 
 const Educerts = () => {
   return (
-    <section
-      className="py-24 px-6 md:px-10 border-t border-stone-900/40"
-      id="educerts"
-    >
+    <section className="py-24 px-6 md:px-10 " id="educerts">
       {/* HEADER */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
