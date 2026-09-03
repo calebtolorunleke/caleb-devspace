@@ -44,7 +44,7 @@ const App = () => {
             />
 
             {/* ALL PROJECTS */}
-            <Route path="/more-projects" element={<Projects />} />
+            <Route path="/more-projects" element={<Projects isDark={isDark} setIsDark={setIsDark}  />} />
           </Routes>
         </div>
 

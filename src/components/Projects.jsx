@@ -13,7 +13,7 @@ const Projects = ({ isDark }) => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -80 }}
         transition={{ duration: 0.6 }}
-        className={`${isHome ? "my-20" : "mt-0 mb-20"} text-center text-4xl font-semibold  ${isDark ? "text-white" : "text-black"}`}
+        className={` ${isDark ? "text-white" : "text-black"} ${isHome ? "my-20" : "mt-0 mb-20"} text-center text-4xl font-semibold `}
       >
         Projects
       </motion.h2>
@@ -58,27 +58,52 @@ const Projects = ({ isDark }) => {
               >
                 {/* PROJECT META */}
                 <div className="flex flex-wrap items-center gap-2 mb-4">
-                  <span className="text-sm font-medium text-indigo-300">
+                  <span
+                    className={`text-sm font-semibold ${
+                      isDark ? "text-indigo-300" : "text-indigo-600"
+                    }`}
+                  >
+                    {" "}
                     {project.role}
                   </span>
 
-                  <span className="text-stone-600">•</span>
+                  <span
+                    className={isDark ? "text-stone-600" : "text-stone-800"}
+                  >
+                    •
+                  </span>
 
-                  <span className="text-sm text-stone-400">
+                  <span
+                    className={`text-sm ${
+                      isDark ? "text-stone-400" : "text-stone-800"
+                    }`}
+                  >
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
+                <h3
+                  className={`text-xl md:text-2xl font-semibold mb-3 ${
+                    isDark ? "text-white" : "text-stone-900"
+                  }`}
+                >
                   {project.title}
                 </h3>
 
-                <ul className="mb-6 space-y-2">
+                <ul
+                  className={`${!isDark && "bg-white/70"} p-2 mb-6 space-y-2`}
+                >
                   {project.highlights?.slice(0, 3).map((highlight) => (
                     <li
                       key={highlight}
-                      className="flex gap-3 text-sm leading-relaxed text-stone-400"
+                      className={`flex gap-3 text-sm leading-relaxed ${
+                        isDark ? "text-stone-400" : "text-stone-600 "
+                      }`}
                     >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-stone-500" />
+                      <span
+                        className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${
+                          isDark ? "bg-stone-500" : "bg-stone-400"
+                        }`}
+                      />{" "}
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -93,7 +118,11 @@ const Projects = ({ isDark }) => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm rounded-full bg-stone-900 text-stone-300 hover:bg-stone-800 transition"
+                      className={`px-3 py-1 text-sm rounded-full transition hover:ease-in ${
+                        isDark
+                          ? "bg-stone-900 text-stone-300 hover:bg-stone-800"
+                          : "bg-stone-900 text-stone-100 hover:bg-stone-800 border border-stone-200"
+                      }`}
                     >
                       {tech}
                     </span>
@@ -118,7 +147,12 @@ const Projects = ({ isDark }) => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2 rounded-xl border border-stone-500 text-stone-300 text-sm font-medium hover:bg-stone-800 transition"
+                      // className="px-5 py-2 rounded-xl border border-stone-500 text-stone-300 text-sm font-medium hover:bg-stone-800 transition"
+                      className={`px-5 py-2 rounded-xl border text-sm font-medium transition ${
+                        isDark
+                          ? "border-stone-500 text-stone-300 hover:bg-stone-800"
+                          : "border-stone-900 text-stone-900 hover:bg-stone-100"
+                      }`}
                     >
                       GitHub
                     </a>
@@ -137,14 +171,27 @@ const Projects = ({ isDark }) => {
             viewport={{ once: true }}
             className="flex justify-end pt-4"
           >
-            <button
+            {/* <button
               type="button"
               onClick={() => {
                 window.scrollTo(0, 0);
                 navigate("/more-projects");
               }}
               className="group flex items-center gap-3 rounded-full border border-stone-700 px-7 py-3 text-sm font-medium tracking-wide text-stone-300 transition-all duration-300 hover:-translate-y-1 hover:border-stone-400 hover:bg-stone-900 hover:text-white cursor-pointer"
+            > */}
+            <button
+              type="button"
+              onClick={() => {
+                window.scrollTo(0, 0);
+                navigate("/more-projects");
+              }}
+              className={`group flex items-center gap-3 rounded-full border px-7 py-3 text-sm font-medium tracking-wide transition-all duration-300 hover:-translate-y-1 cursor-pointer ${
+                isDark
+                  ? "border-stone-700 text-stone-300 hover:border-stone-400 hover:bg-stone-900 hover:text-white"
+                  : "border-stone-400 text-stone-700 hover:border-stone-500 hover:bg-stone-100 hover:text-stone-900"
+              }`}
             >
+              {" "}
               <span>Explore More</span>{" "}
               <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">
                 →
