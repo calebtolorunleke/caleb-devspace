@@ -28,7 +28,7 @@ const Home = ({ isDark, setIsDark }) => {
       </section>
 
       <section id="contact" className="scroll-mt-24">
-        <Contact />
+        <Contact isDark={isDark} />
       </section>
     </>
   );
