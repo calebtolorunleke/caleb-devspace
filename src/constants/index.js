@@ -50,7 +50,7 @@ export const EXPERIENCES = [
     company: "Findworka",
     location: "Hybrid, Nigeria / Canada",
     description: [
-      "•  Developed and maintained responsive customer-facing applications using React and modern JavaScript, translating product requirements into reusable UI components and data-driven features.",
+      "Developed and maintained responsive customer-facing applications using React and modern JavaScript, translating product requirements into reusable UI components and data-driven features.",
       "Improved application performance through code splitting, lazy loading, asset optimization, and rendering improvements to strengthen user experience and Lighthouse performance.",
       "Integrated React applications with REST APIs and collaborated with backend engineers to deliver scalable product features.",
       "Worked across frontend and backend components using Node.js, Express.js, and MongoDB to support application functionality and API-driven workflows.",
@@ -359,7 +359,7 @@ export const certifications = [
     year: "2023",
   },
   {
-    title: "Microsoft Azure Fundamentals",
+    title: "Microsoft Certified: Azure Data Fundamentals",
     issuer: "Microsoft",
     year: "2023",
   },
