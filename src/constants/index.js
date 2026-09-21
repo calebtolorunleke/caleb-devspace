@@ -50,10 +50,12 @@ export const EXPERIENCES = [
     company: "Findworka",
     location: "Hybrid, Nigeria / Canada",
     description: [
-      "Developed and maintained responsive customer-facing applications using React and modern JavaScript, translating product requirements into reusable UI components.",
-      "Improved page performance through code splitting, lazy loading, asset optimization, and rendering improvements.",
-      "Collaborated with backend engineers to integrate REST APIs and deliver scalable, data-driven product features.",
-      "Mentored junior developers on React, JavaScript, component architecture, and API integration practices.",
+      "•  Developed and maintained responsive customer-facing applications using React and modern JavaScript, translating product requirements into reusable UI components and data-driven features.",
+      "Improved application performance through code splitting, lazy loading, asset optimization, and rendering improvements to strengthen user experience and Lighthouse performance.",
+      "Integrated React applications with REST APIs and collaborated with backend engineers to deliver scalable product features.",
+      "Worked across frontend and backend components using Node.js, Express.js, and MongoDB to support application functionality and API-driven workflows.",
+      "Mentored junior developers on React, JavaScript, component architecture, and API integration practices, improving onboarding and engineering consistency."
+
     ],
     technologies: [
       "React",
@@ -74,10 +76,13 @@ export const EXPERIENCES = [
     company: "Guaranty Trust Bank (GTCO)",
     location: "Hybrid, Nigeria",
     description: [
-      "Managed the stability and operational health of enterprise banking applications supporting more than three million users while maintaining 99.9% platform availability.",
-      "Led root-cause analysis for high-priority incidents and partnered with engineering teams on permanent code-level and process improvements.",
+      "Supported the stability and operational health of enterprise banking applications serving more than 3 million users while maintaining 99.9% platform availability.",
+      "Investigated and resolved high-priority production issues, performing root-cause analysis and partnering with engineering teams on permanent code-level and process improvements.",
       "Developed Python and PowerShell automation that reduced repetitive operational work by more than 15 hours per week.",
-      "Built Dynatrace and Grafana dashboards and alerts that improved production visibility, issue detection, and incident response.",
+      "Built Dynatrace and Grafana dashboards and alerts to improve production visibility, issue detection, and incident response.",
+      "Worked with REST APIs, Oracle SQL, cloud services, and application monitoring tools to diagnose failures across distributed production environments.",
+      "Trained and mentored junior engineers on production support practices, incident troubleshooting, root-cause analysis, and effective operational workflows."
+
     ],
     technologies: [
       "Python",
