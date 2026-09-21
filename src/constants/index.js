@@ -374,6 +374,6 @@ export const CONTACT = {
   address: "Vancouver, British Columbia, Canada",
   phoneNo: "",
   email: "calebtolorunleke@yahoo.com",
-  linkedin: "https://www.linkedin.com/in/calebtolorunleke",
+  linkedin: "https://www.linkedin.com/in/calebtol/",
   github: "https://github.com/calebtolorunleke",
 };
