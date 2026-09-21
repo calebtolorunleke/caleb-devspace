@@ -322,6 +322,10 @@ export const PROJECTS = [
 
 export const education = [
   {
+    school: "Northeastern University",
+    degree: "Master of Science in Computer Science",
+    period: "2026 - Present",
+  }, {
     school: "Obafemi Awolowo University",
     degree: "PGD Computer Science (Postgraduate)",
     period: "2023 - 2025",
