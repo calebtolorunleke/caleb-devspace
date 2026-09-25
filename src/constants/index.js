@@ -4,6 +4,7 @@ import quickDine from "../assets/projects/quickdine.png";
 import skillPath from "../assets/projects/skillpath.png";
 import spendWise from "../assets/projects/project2.png";
 import driveora from "../assets/projects/driveora.png";
+import tomato from "../assets/projects/tomato.png"
 
 export const HERO_CONTENT = `Building scalable web applications and reliable production systems. Experienced with React, Next.js, TypeScript, Node.js, REST APIs, CI/CD, AWS, observability, and automation across fintech and enterprise environments.`;
 
