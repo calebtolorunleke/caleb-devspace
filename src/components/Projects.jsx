@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { PROJECTS } from "../constants/index";
+import Contact from "./Contact.jsx";
 import { motion } from "framer-motion";
 
 const Projects = ({ isDark }) => {
@@ -17,7 +18,6 @@ const Projects = ({ isDark }) => {
       >
         Projects
       </motion.h2>
-
       <div className="space-y-24">
         {(isHome ? PROJECTS.slice(0, 3) : PROJECTS).map((project, index) => {
           const isEven = index % 2 === 0;
@@ -200,6 +200,7 @@ const Projects = ({ isDark }) => {
           </motion.div>
         )}
       </div>
+      <Contact isDark={isDark} />{" "}
     </div>
   );
 };
