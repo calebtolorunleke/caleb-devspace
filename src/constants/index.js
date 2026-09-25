@@ -226,6 +226,26 @@ export const PROJECTS = [
 
   {
     id: 4,
+    slug: "tomato",
+    title: "Tomato — Full-Stack Food Delivery & Ordering Platform",
+    category: "Full-Stack · Food Technology",
+    role: "Full-Stack Developer",
+    status: "Featured",
+    featured: true,
+    image: tomato,
+    description:
+      "Designed and built a full-stack food delivery platform that allows users to browse menus, explore food categories, manage a shopping basket, authenticate accounts, and place food orders through a responsive web experience.",
+
+    highlights: [
+      "Built the frontend experience with React, creating reusable components for navigation, food categories, product cards, cart interactions, authentication, and responsive layouts.",
+      "Implemented the food discovery and ordering workflow with category-based menu browsing, dynamic product data, basket management, quantity updates, and order-related state handling.",
+      "Integrated the frontend with backend REST APIs and implemented client-server data flows, loading states, form handling, and error handling to support a complete end-to-end ordering experience.",
+    ], demo: "https://food-del-kohl-eta.vercel.app",
+    github: "",
+  },
+
+  {
+    id: 5,
     slug: "quickdine",
     title: "QuickDine — Restaurant Discovery & Reservation Platform",
     category: "Full-Stack · Hospitality Technology",
@@ -258,7 +278,7 @@ export const PROJECTS = [
   },
 
   {
-    id: 5,
+    id: 6,
     slug: "skillpath",
     title: "SkillPath — Online Learning Platform",
     category: "Frontend · Education Technology",
@@ -289,7 +309,7 @@ export const PROJECTS = [
   },
 
   {
-    id: 6,
+    id: 7,
     slug: "spendwise",
     title: "SpendWise — Personal Finance Dashboard",
     category: "Frontend · Financial Technology",
