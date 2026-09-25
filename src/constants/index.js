@@ -4,7 +4,7 @@ import quickDine from "../assets/projects/quickdine.png";
 import skillPath from "../assets/projects/skillpath.png";
 import spendWise from "../assets/projects/project2.png";
 import driveora from "../assets/projects/driveora.png";
-import tomato from "../assets/projects/tomato.png"
+import tomato from "../assets/projects/tomato.jpg"
 
 export const HERO_CONTENT = `Building scalable web applications and reliable production systems. Experienced with React, Next.js, TypeScript, Node.js, REST APIs, CI/CD, AWS, observability, and automation across fintech and enterprise environments.`;
 
@@ -223,9 +223,7 @@ export const PROJECTS = [
 
     demo: "https://eventra-rouge.vercel.app/",
     github: "https://github.com/calebtolorunleke/eventra",
-  },
-
-  {
+  }, {
     id: 4,
     slug: "tomato",
     title: "Tomato — Full-Stack Food Delivery & Ordering Platform",
@@ -234,6 +232,7 @@ export const PROJECTS = [
     status: "Featured",
     featured: true,
     image: tomato,
+
     description:
       "Designed and built a full-stack food delivery platform that allows users to browse menus, explore food categories, manage a shopping basket, authenticate accounts, and place food orders through a responsive web experience.",
 
@@ -241,9 +240,24 @@ export const PROJECTS = [
       "Built the frontend experience with React, creating reusable components for navigation, food categories, product cards, cart interactions, authentication, and responsive layouts.",
       "Implemented the food discovery and ordering workflow with category-based menu browsing, dynamic product data, basket management, quantity updates, and order-related state handling.",
       "Integrated the frontend with backend REST APIs and implemented client-server data flows, loading states, form handling, and error handling to support a complete end-to-end ordering experience.",
-    ], demo: "https://food-del-kohl-eta.vercel.app",
+    ],
+
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "MongoDB",
+      "Git",
+      "GitHub",
+      "Vercel",
+    ],
+
+    demo: "https://food-del-kohl-eta.vercel.app/",
     github: "https://github.com/calebtolorunleke/food-del/tree/main/frontend",
-  },
+  }, ,
 
   {
     id: 5,
