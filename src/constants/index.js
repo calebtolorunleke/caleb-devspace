@@ -241,7 +241,7 @@ export const PROJECTS = [
       "Implemented the food discovery and ordering workflow with category-based menu browsing, dynamic product data, basket management, quantity updates, and order-related state handling.",
       "Integrated the frontend with backend REST APIs and implemented client-server data flows, loading states, form handling, and error handling to support a complete end-to-end ordering experience.",
     ], demo: "https://food-del-kohl-eta.vercel.app",
-    github: "",
+    github: "https://github.com/calebtolorunleke/food-del/tree/main/frontend",
   },
 
   {
