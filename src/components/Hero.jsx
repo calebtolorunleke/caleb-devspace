@@ -52,7 +52,7 @@ const Hero = ({ isDark }) => {
             >
               <img
                 src={profilePic}
-                alt="Caleb Adebayo"
+                alt="Caleb T. Adebayo"
                 width={400}
                 height={100}
                 className="
