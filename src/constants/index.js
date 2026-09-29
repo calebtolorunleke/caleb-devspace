@@ -75,7 +75,7 @@ export const EXPERIENCES = [
     year: "Oct 2022 – Jul 2025",
     role: "Production Engineer / Unit Head",
     company: "Guaranty Trust Bank (GTCO)",
-    location: "Hybrid, Nigeria",
+    location: "Hybrid, Lagos, Nigeria",
     description: [
       "Supported the stability and operational health of enterprise banking applications serving more than 3 million users while maintaining 99.9% platform availability.",
       "Investigated and resolved high-priority production issues, performing root-cause analysis and partnering with engineering teams on permanent code-level and process improvements.",
