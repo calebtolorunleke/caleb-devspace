@@ -169,7 +169,7 @@ const Projects = ({ isDark }) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex justify-end pt-4"
+            className="flex justify-end py-8"
           >
             {/* <button
               type="button"
