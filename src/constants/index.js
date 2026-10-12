@@ -423,7 +423,7 @@ import skillPath from "../assets/projects/skillpath.png";
 import spendWise from "../assets/projects/project2.png";
 import driveora from "../assets/projects/driveora.png";
 import tomato from "../assets/projects/tomato.jpg";
-import drive from "../assets/projects/drive.png"; // Ensure you add this image asset to your project!
+import drive from "../assets/projects/drive.jpg"; // Ensure you add this image asset to your project!
 
 export const HERO_CONTENT = `Building scalable web applications and reliable production systems. Experienced with React, Next.js, TypeScript, Node.js, REST APIs, CI/CD, AWS, observability, and automation across fintech and enterprise environments.`;
 
